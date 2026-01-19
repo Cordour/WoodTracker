@@ -1,5 +1,6 @@
 {
   "version": "1.2.0",
-  "url": "https://github.com/Cordour/WoodTracker/releases/latest/download/WoodTracker.exe",
-  "changelog": "Fix Google OAuth + stabilité sync"
+  "changelog": "- Update auto stable\n- Fix sync\n- UI polish",
+  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.2.0/WoodTracker-win-x64.zip"
 }
+
