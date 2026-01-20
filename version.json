@@ -1,6 +1,10 @@
 {
   "version": "1.1.5",
-  "changelog": "- Update auto stable\n- Fix sync\n- UI polish",
+  "changelog": "Patch notes :
+
+Fix des différents bug outils : installation addon/actualisation de la BDD
+
+Empêche la synchro de se lancer automatiquement si un maj est disponible",
   "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.1.5/WoodTracker-win-x64.zip"
 }
 
