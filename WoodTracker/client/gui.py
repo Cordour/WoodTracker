@@ -203,6 +203,10 @@ class WoodTrackerGUI(tk.Tk):
 
     def open_patchnotes_window(self, data):
         win = tk.Toplevel(self)
+        try:
+            win.iconbitmap(resource_path("assets/woodtracker.ico"))
+        except Exception:
+            pass
         win.title(f"Mise à jour v{data['version']}")
         win.resizable(False, False)
         win.configure(bg=BG_MAIN)
@@ -228,7 +232,7 @@ class WoodTrackerGUI(tk.Tk):
         if data.get("addon_updated"):
             tk.Label(
                 win,
-                text="⚠ Cette mise à jour inclut une mise à jour de l’addon World of Warcraft.",
+                text="⚠ Cette mise à jour inclut aussi une mise à jour de l’addon World of Warcraft. Vous conservez toutefois vos réglages.",
                 bg=BG_MAIN,
                 fg="#ffb300",
                 font=("Segoe UI", 9, "bold"),
@@ -283,7 +287,15 @@ class WoodTrackerGUI(tk.Tk):
 
         win.update_idletasks()
         win.minsize(win.winfo_width(), win.winfo_height())
+        screen_w = win.winfo_screenwidth()
+        screen_h = win.winfo_screenheight()
+        win_w = win.winfo_width()
+        win_h = win.winfo_height()
 
+        x = (screen_w // 2) - (win_w // 2)
+        y = (screen_h // 2) - (win_h // 2)
+
+        win.geometry(f"+{x}+{y}")
 
 
     def _confirm_update(self, data, win):
