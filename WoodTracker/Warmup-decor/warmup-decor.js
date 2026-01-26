@@ -6,7 +6,7 @@
 import "dotenv/config";
 import fs from "fs";
 
-const CONCURRENCY_LIMIT = 2;
+const CONCURRENCY_LIMIT = 16;
 const OUTPUT_FILE = "decor.json";
 
 const CLIENT_ID = process.env.BLIZZARD_CLIENT_ID;
@@ -17,6 +17,22 @@ if (!CLIENT_ID || !CLIENT_SECRET) {
   process.exit(1);
 }
 
+const RECIPE_CACHE_FILE = "recipe_cache.json";
+
+let RECIPE_CACHE = {};
+if (fs.existsSync(RECIPE_CACHE_FILE)) {
+  try {
+    RECIPE_CACHE = JSON.parse(
+      fs.readFileSync(RECIPE_CACHE_FILE, "utf8")
+    );
+    console.log(`📦 Cache recipes chargé (${Object.keys(RECIPE_CACHE).length})`);
+  } catch {
+    console.warn("⚠ Cache recipes corrompu, ignoré");
+    RECIPE_CACHE = {};
+  }
+}
+
+
 
 function normalize(str) {
   return str
@@ -24,6 +40,9 @@ function normalize(str) {
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 }
+
+
+
 
 /* ===========================
    METIER (FOURNI)
@@ -51,29 +70,35 @@ function getWoodCount(recipe, tierName) {
   const woodId = WOOD_BY_TIER.find(w => tierNorm.includes(w.key))?.id;
   if (!woodId) return 0;
 
-  let total = 0;
-
+  // 1️⃣ cas simple : reagent direct
   if (Array.isArray(recipe.reagents)) {
+    let total = 0;
     for (const r of recipe.reagents) {
       if (r.reagent?.id === woodId) {
         total += r.quantity || 0;
       }
     }
+    if (total > 0) return total;
   }
 
+  // 2️⃣ cas décor : reagent slot
   if (Array.isArray(recipe.reagent_slots)) {
     for (const slot of recipe.reagent_slots) {
       if (!Array.isArray(slot.reagents)) continue;
 
-      const match = slot.reagents.find(r => r.reagent?.id === woodId);
-      if (match) {
+      const hasWoodOption = slot.reagents.some(
+        r => r.reagent?.id === woodId
+      );
+
+      if (hasWoodOption) {
         return slot.quantity || 0;
       }
     }
   }
 
-  return total;
+  return 0;
 }
+
 
 /* ===========================
    FETCH BLIZZARD (FOURNI)
@@ -183,6 +208,13 @@ async function fetchRecipe(token, recipeId) {
 =========================== */
 
 (async function main() {
+  const decorBuffer = [];
+  let stats = {
+    total: 0,
+    withCrafted: 0,
+    withWood: 0,
+    returned: 0
+  };
   const start = Date.now();
   let errorCount = 0;
   let recipeCount = 0;
@@ -213,6 +245,7 @@ async function fetchRecipe(token, recipeId) {
       let recipes;
       try {
         recipes = await fetchTierRecipes(token, prof.id, tier.id);
+        
       } catch (e) {
         console.warn(`    ⚠ recipes failed`);
         errorCount++;
@@ -221,47 +254,62 @@ async function fetchRecipe(token, recipeId) {
 
       const tasks = recipes.map(r => async () => {
         try {
-          const recipe = await fetchRecipe(token, r.id);
-          recipeCount++;
+          let recipe;
+
+          if (RECIPE_CACHE[r.id]) {
+            recipe = RECIPE_CACHE[r.id];
+          } else {
+            recipe = await fetchRecipe(token, r.id);
+            RECIPE_CACHE[r.id] = recipe;
+          }
+
+          stats.total++;
+
+          if (recipe.crafted_item?.id) stats.withCrafted++;
 
           const wood = getWoodCount(recipe, tier.name);
+          if (wood > 0) stats.withWood++;
+
+          // ⛔ TEMPORAIRE : on retourne TOUT ce qui a du bois
           if (wood > 0) {
-            return {
+            stats.returned++;
+            decorBuffer.push({
+              professionId: prof.id,
+              profession: prof.name,
+              tierId: tier.id,
+              tier: tier.name,
               name: recipe.name,
-              wood
-            };
+              wood,
+              itemID: recipe.crafted_item?.id ?? null
+            });
           }
-        } catch {
+
+
+          return null;
+        } catch (e) {
           errorCount++;
+          return null;
         }
-        return null;
       });
-
-      const results = await runWithConcurrency(
-        tasks,
-        CONCURRENCY_LIMIT
-      );
-
-      const items = results.filter(Boolean);
-      if (items.length > 0) {
-        output.push({
-          professionId: prof.id,
-          profession: prof.name,
-          tierId: tier.id,
-          tier: tier.name,
-          items
-        });
-      }
+      await runWithConcurrency(tasks, CONCURRENCY_LIMIT);
     }
   }
-
-  
+    console.log("\n📊 STATS DEBUG");
+    console.log(stats);
 
     fs.writeFileSync(
-    OUTPUT_FILE,
-    JSON.stringify(output, null, 2),
+    RECIPE_CACHE_FILE,
+    JSON.stringify(RECIPE_CACHE),
     "utf8"
+  );
+
+
+    fs.writeFileSync(
+      OUTPUT_FILE,
+      JSON.stringify(decorBuffer, null, 2),
+      "utf8"
     );
+
 
   const duration = ((Date.now() - start) / 1000).toFixed(1);
 

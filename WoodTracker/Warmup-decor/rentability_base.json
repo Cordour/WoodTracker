@@ -1,0 +1,6552 @@
+[
+  {
+    "decorName": "Recalibrateur atomique désactivé",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Kul Tiras / Ingénierie de Zandalar",
+    "wood": 42,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 42,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 163569,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 166970,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Méga-bobine Tesla gnome",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Kul Tiras / Ingénierie de Zandalar",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 163569,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 160502,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 166970,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Soleil artificiel miniature de Mécagone",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Kul Tiras / Ingénierie de Zandalar",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 163569,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 154123,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Auto-marteau de Dalaran",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Legion",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 132514,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Pylône de détection des échecs défectueux",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Legion",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 136637,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 136633,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 130183,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Télescope d’astronome draeneï",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Draenor",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 113588,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 113264,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table d’architecte de Mur-de-Givre",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Draenor",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 39354,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Marmite de Micolline",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Pandarie",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 72095,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 77467,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 3857,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Foreuse de foudre mogu reconstituée",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Pandarie",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 72095,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 77468,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 77467,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 87872,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Solutionneur gilnéen",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Cataclysm",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 53039,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 60224,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 53010,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Petit moulin à vent gilnéen",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Cataclysm",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 60224,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 52976,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 67749,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Mur de trains joyeux de Mizanjoie",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie du Norfendre",
+    "wood": 46,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 46,
+        "optional": false
+      },
+      {
+        "itemID": 41163,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 39683,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 39682,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 39681,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Gadget de défense de domicile",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie du Norfendre",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 44501,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 39681,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 39682,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Engrenage multifonction redimensionnable",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie du Norfendre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 41163,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 39681,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Nacelle cryogénique du donjon de la Tempête",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie d’Outreterre",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 32423,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 23783,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 23786,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 23785,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piédestal de projecteur holographique draeneï",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie d’Outreterre",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 23787,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 23786,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Transmetteur draeneï",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie d’Outreterre",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 23783,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 23782,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lit à vapeur gnome",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie classique",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 16000,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 16006,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 7078,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 14048,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Scie sur table sombrefer",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie classique",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 11371,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 16006,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 7076,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 15994,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonneau d’anima kyrian",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie d’Ombreterre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 171829,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 173110,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 172935,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 173173,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse de capture du cartel Xy",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie d’Ombreterre",
+    "wood": 42,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 42,
+        "optional": false
+      },
+      {
+        "itemID": 171441,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 172934,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 171428,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 172936,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 172935,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Télescope de Thaldraszus",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie des îles aux Dragons",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 25,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fontaine titanesque du bastion de Tyr",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie des îles aux Dragons",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 190324,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 198487,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 201406,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Guirlande lumineuse gobeline chic",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Khaz Algar",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 213399,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réplique de nacelle de foreuse du désert Grondant",
+    "profession": "Ingénierie",
+    "tier": "Ingénierie de Khaz Algar",
+    "wood": 42,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 42,
+        "optional": false
+      },
+      {
+        "itemID": 221756,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 212498,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Broyeur de Brennadam",
+    "profession": "Forge",
+    "tier": "Forge de Kul Tiras / Forge de Zandalar",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 154898,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fourneau chantorage",
+    "profession": "Forge",
+    "tier": "Forge de Kul Tiras / Forge de Zandalar",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 160298,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture de Suramar",
+    "profession": "Forge",
+    "tier": "Forge de Legion",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124441,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet de Suramar",
+    "profession": "Forge",
+    "tier": "Forge de Legion",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 124441,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Marmite de soupe taurène",
+    "profession": "Forge",
+    "tier": "Forge de Legion",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 133588,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 124109,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 133591,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 133589,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Forge de Mur-de-Givre",
+    "profession": "Forge",
+    "tier": "Forge de Draenor",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 113261,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 120945,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 25,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Râtelier d’armes rochenoires",
+    "profession": "Forge",
+    "tier": "Forge de Draenor",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 110609,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 118472,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Foyer pandaren",
+    "profession": "Forge",
+    "tier": "Forge de Pandarie",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 72095,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero de signal pandaren",
+    "profession": "Forge",
+    "tier": "Forge de Pandarie",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 72104,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 80433,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 3857,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fourche gilnéenne",
+    "profession": "Forge",
+    "tier": "Forge de Cataclysm",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52186,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 52327,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe à fumée sur pied",
+    "profession": "Forge",
+    "tier": "Forge de Cataclysm",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 52193,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52078,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Enclume runique de Dalaran",
+    "profession": "Forge",
+    "tier": "Forge du Norfendre",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 37663,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 45087,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 35624,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir solaire de Dalaran",
+    "profession": "Forge",
+    "tier": "Forge du Norfendre",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 37663,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 36860,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Porte des égouts de Dalaran",
+    "profession": "Forge",
+    "tier": "Forge du Norfendre",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 37663,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 45087,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 35622,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière des Exilés en bronze",
+    "profession": "Forge",
+    "tier": "Forge d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 23449,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 22452,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 21845,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Forge en cristal draeneï",
+    "profession": "Forge",
+    "tier": "Forge d’Outreterre",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 23573,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 23449,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 21884,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 25868,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Enclume de forge draeneï",
+    "profession": "Forge",
+    "tier": "Forge d’Outreterre",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 23573,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 23449,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 22452,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir ombreforge",
+    "profession": "Forge",
+    "tier": "Forge classique",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 11371,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 17011,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 14344,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Emblème de Forgefer en acier",
+    "profession": "Forge",
+    "tier": "Forge classique",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 11371,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 12360,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 12810,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Calice venthyr orné de joyaux",
+    "profession": "Forge",
+    "tier": "Forge d’Ombreterre",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 171832,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 171828,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 173109,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 173171,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bassin de méditation d’aspirant",
+    "profession": "Forge",
+    "tier": "Forge d’Ombreterre",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 172437,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 171828,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 173060,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 173173,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chaudron suspendu de Valdrakken",
+    "profession": "Forge",
+    "tier": "Forge des îles aux Dragons",
+    "wood": 46,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 46,
+        "optional": false
+      },
+      {
+        "itemID": 204634,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 193922,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero de signal de Trêve-Ailée",
+    "profession": "Forge",
+    "tier": "Forge des îles aux Dragons",
+    "wood": 42,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 42,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Banc boulonné oxydé",
+    "profession": "Forge",
+    "tier": "Forge de Khaz Algar",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Coffre de stockage à roue dentée",
+    "profession": "Forge",
+    "tier": "Forge de Khaz Algar",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 222523,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Totem d’eaugure",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Kul Tiras / Enchantement de Zandalar",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 168185,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 152877,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 152875,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 158186,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bâtonnet d’enchantement drust",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Kul Tiras / Enchantement de Zandalar",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 152876,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 152541,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 154165,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cellule de confinement de Suramar",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Legion",
+    "wood": 34,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 34,
+        "optional": false
+      },
+      {
+        "itemID": 124442,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124124,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fontaine de la Nocteflèche",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Legion",
+    "wood": 48,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 48,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 124441,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 127835,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124124,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero de signal ancestral",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Draenor",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 113588,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 113261,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 113263,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Guirlande lumineuse en draenéthyste",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Draenor",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 111245,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero mogu intense",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Pandarie",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 74248,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 94289,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 3857,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe de table pandarène",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Pandarie",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 74247,
+        "qty": 9,
+        "optional": false
+      },
+      {
+        "itemID": 72988,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réservoir de feu du Crépuscule",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Cataclysm",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 52722,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52328,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 53039,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 69237,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bouteille en verre de Bois-du-Bûcher",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Cataclysm",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 52555,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 52325,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Marque de l’œil des mages",
+    "profession": "Enchantement",
+    "tier": "Enchantement du Norfendre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 34057,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 34055,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 34054,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Portail postal de Siffletimbre",
+    "profession": "Enchantement",
+    "tier": "Enchantement du Norfendre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 34057,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 34055,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 41163,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 41510,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Holo-estrade draeneï",
+    "profession": "Enchantement",
+    "tier": "Enchantement d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 22449,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 22446,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 22445,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Holo-chemin draeneï",
+    "profession": "Enchantement",
+    "tier": "Enchantement d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 22449,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 22446,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 22445,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Console stellaire de l’Aldor",
+    "profession": "Enchantement",
+    "tier": "Enchantement d’Outreterre",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 22450,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 22449,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 22446,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 22445,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Feu de camp de Tirisfal",
+    "profession": "Enchantement",
+    "tier": "Enchantement classique",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 16203,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 12365,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 17010,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero mystique du Sombre Maître",
+    "profession": "Enchantement",
+    "tier": "Enchantement classique",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 12808,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 14344,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 16203,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 20520,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bouteille d’anima venthyr",
+    "profession": "Enchantement",
+    "tier": "Enchantement d’Ombreterre",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 172230,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 171832,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réverbère de Sylvarden",
+    "profession": "Enchantement",
+    "tier": "Enchantement d’Ombreterre",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 172232,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 172230,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 177061,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Grimoire des cinq Vols",
+    "profession": "Enchantement",
+    "tier": "Enchantement des îles aux Dragons",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 193922,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 190327,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 194784,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 194124,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bassin de scribe draconique",
+    "profession": "Enchantement",
+    "tier": "Enchantement des îles aux Dragons",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 256171,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 200113,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 194784,
+        "qty": 9,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réplique de nacelle de stase de machine d’éveil",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Khaz Algar",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 221754,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 213610,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir suspendu de Dornogal",
+    "profession": "Enchantement",
+    "tier": "Enchantement de Khaz Algar",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis de Dazar’alor rouge",
+    "profession": "Couture",
+    "tier": "Couture de Kul Tiras / Couture de Zandalar",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 152576,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 159959,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 158188,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapisserie zanchuli",
+    "profession": "Couture",
+    "tier": "Couture de Kul Tiras / Couture de Zandalar",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 158378,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 152513,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 159959,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tente de plein air shal’dorei",
+    "profession": "Couture",
+    "tier": "Couture de Legion",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 127037,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis shal’dorei circulaire",
+    "profession": "Couture",
+    "tier": "Couture de Legion",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 124437,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 127037,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Raptor en peluche adorable",
+    "profession": "Couture",
+    "tier": "Couture de Legion",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 124437,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 130175,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 127037,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis circulaire argusséen",
+    "profession": "Couture",
+    "tier": "Couture de Draenor",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 120945,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lit de Karabor",
+    "profession": "Couture",
+    "tier": "Couture de Draenor",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Elekk en peluche adorable",
+    "profession": "Couture",
+    "tier": "Couture de Draenor",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 113588,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis de vagabondage pandaren",
+    "profession": "Couture",
+    "tier": "Couture de Pandarie",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 82441,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 82444,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Filet de pêche pandaren",
+    "profession": "Couture",
+    "tier": "Couture de Pandarie",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 82441,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 74866,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tente d’exploration de Surwich",
+    "profession": "Couture",
+    "tier": "Couture de Cataclysm",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 53643,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 54450,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapisserie « Unité des épines »",
+    "profession": "Couture",
+    "tier": "Couture de Cataclysm",
+    "wood": 26,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 26,
+        "optional": false
+      },
+      {
+        "itemID": 54440,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 38426,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 61981,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière dorée de Dalaran",
+    "profession": "Couture",
+    "tier": "Couture du Norfendre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 41595,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 6260,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 2604,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 36925,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière de la silhouette du Kirin Tor",
+    "profession": "Couture",
+    "tier": "Couture du Norfendre",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 41595,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 41594,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 2604,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 6260,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Grand drapé des Exilés",
+    "profession": "Couture",
+    "tier": "Couture d’Outreterre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 21842,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 22457,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Métier à tisser de tisseuse draeneï",
+    "profession": "Couture",
+    "tier": "Couture d’Outreterre",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 24271,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 21845,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 24272,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis de la cime des Anciens",
+    "profession": "Couture",
+    "tier": "Couture classique",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 14048,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 2604,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière du quartier des Nains",
+    "profession": "Couture",
+    "tier": "Couture classique",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 14342,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 4341,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 13926,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Coussin roulé d’aspirant kyrian",
+    "profession": "Couture",
+    "tier": "Couture d’Ombreterre",
+    "wood": 14,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 14,
+        "optional": false
+      },
+      {
+        "itemID": 173202,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 177062,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière du cœur de la Forêt",
+    "profession": "Couture",
+    "tier": "Couture d’Ombreterre",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 172439,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 177062,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 177061,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 173170,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière à anneaux de l’aspirant",
+    "profession": "Couture",
+    "tier": "Couture d’Ombreterre",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 171828,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 173202,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 177062,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 173173,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis circulaire draconique",
+    "profession": "Couture",
+    "tier": "Couture des îles aux Dragons",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 35,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapisserie des cinq Vols",
+    "profession": "Couture",
+    "tier": "Couture des îles aux Dragons",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 192872,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis encadré de Dornogal",
+    "profession": "Couture",
+    "tier": "Couture de Khaz Algar",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 224764,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Pouf de Terremine",
+    "profession": "Couture",
+    "tier": "Couture de Khaz Algar",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 224764,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet de Zuldazar",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 158188,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture de Zuldazar",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 158188,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table zandalari dorée",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 158187,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 24,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonneau de Boralus",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 160711,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 152576,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse de transport des Portvaillant",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 158187,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 160711,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Étagère de livres de Boralus",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Kul Tiras / Calligraphie de Zandalar",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 152576,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 160711,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Coffre de stockage tauren",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 129034,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 124437,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table de Suramar carrée couverte",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table de joaillerie sacrenuit",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 129034,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 129100,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse de stockage de Suramar",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 129034,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Penderie de Suramar",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 129034,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Présentoir de Dalaran",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Legion",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 129032,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 151565,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 136693,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brasero élevé de Mur-de-Givre",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Draenor",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 118472,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 113261,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse de transport en bois",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Draenor",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 113263,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonneau ficelé orc",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Draenor",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 114931,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 113263,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture orque",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Draenor",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 113263,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet orc",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Draenor",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 113263,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lanternes en papier suspendues",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Pandarie",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 79255,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 82441,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table pandarène en bois",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Pandarie",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 79254,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 87872,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table pandarène carrée",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Pandarie",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 79254,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Banc de voyage porte-bonheur",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Pandarie",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 79254,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 87872,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque de chroniqueur",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Pandarie",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 79255,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 72104,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 39354,
+        "qty": 18,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table gilnéenne en bois",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Cataclysm",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 61981,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52327,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 56850,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fauteuil à bascule gilnéen",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Cataclysm",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 61981,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52328,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 56850,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Étagère murale gilnéenne",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Cataclysm",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 61978,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 52186,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Carte gilnéenne",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Cataclysm",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 61978,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 39354,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Boîte aux lettres gilnéenne",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Cataclysm",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 52186,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 61978,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 55053,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Banc en argent de Dalaran",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie du Norfendre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 37663,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 43127,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plaque de rue de Dalaran",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie du Norfendre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 41163,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 43126,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 39354,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque d’érudition de Dalaran",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie du Norfendre",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 37663,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 43127,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 43126,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 36931,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse du Kirin Tor",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie du Norfendre",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 36931,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 43127,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Poteau de Dalaran",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie du Norfendre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 36916,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 43126,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque de l’Aldor",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Outreterre",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 33458,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 43124,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 22452,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table ronde draeneï dorée",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 23793,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 23449,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Banc de Halaa",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 23793,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 22457,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Panneau en cristal",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Outreterre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 22446,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 43125,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 39354,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Totem du roi-serre",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Outreterre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 43124,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 21886,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Couvercle de cercueil de Brill",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie classique",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 12808,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 7076,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 43123,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cercueil de Brill",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie classique",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 12808,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 7076,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 43123,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque de Kharanos",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie classique",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 10308,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 12365,
+        "qty": 24,
+        "optional": false
+      },
+      {
+        "itemID": 12359,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table de Forgefer en bois",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie classique",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 6037,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 43119,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 12810,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 20963,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Totem des Pitons-du-Tonnerre",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie classique",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 7076,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 43121,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table de maléfices des négociants",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 24,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 24,
+        "optional": false
+      },
+      {
+        "itemID": 173204,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 171828,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 173059,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque du cartel Ta",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 171829,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 173059,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 173110,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Paniers suspendus de Sylvarden",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 173202,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 177061,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Siège d’âme aspirante",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 173059,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 173110,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Grande caisse de stockage de Revendreth",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 171832,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 173058,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tome de rituels maldraxxi",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 175970,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 173126,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 172092,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 175886,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 173172,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Sanctuaire des Faë du creux de la Nuitée",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie d’Ombreterre",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 175970,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 172230,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 173170,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 173202,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 177061,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Littérature du Vol draconique bleu",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 194784,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Littérature du Vol draconique rouge",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 194784,
+        "qty": 16,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Littérature du Vol draconique vert",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 194784,
+        "qty": 16,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonneau ficelé de Valdrakken",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse de stockage de Valdrakken",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Longue caisse de stockage de Valdrakken",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 14,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 14,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Étagère murale de Valdrakken",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie des îles aux Dragons",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 192872,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bacs du marché de la Placeforge",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 18,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bibliothèque de Dornogal",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 226204,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 212508,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Coffre de stockage de l’hydromellerie",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 26,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 26,
+        "optional": false
+      },
+      {
+        "itemID": 222523,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table de Landefrey",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 35,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 35,
+        "optional": false
+      },
+      {
+        "itemID": 221754,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture algarie",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet algari",
+    "profession": "Calligraphie",
+    "tier": "Calligraphie de Khaz Algar",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plat de homard à la mode de Boralus",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Kul Tiras / Cuisine de Zandalar",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 154886,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 160711,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plat de personne affamée",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Draenor",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 111449,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 115352,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Pile de raviolis de mushan",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Pandarie",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 74662,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 74853,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 74839,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 74845,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 74843,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plat de nouilles menthe caramel",
+    "profession": "Cuisine",
+    "tier": "Cuisine d’Ombreterre",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 171829,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 172049,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 172055,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plat de fruits de fleurs de Valdrakken",
+    "profession": "Cuisine",
+    "tier": "Cuisine des îles aux Dragons",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 200953,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 197756,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Côtes de bruffalon",
+    "profession": "Cuisine",
+    "tier": "Cuisine des îles aux Dragons",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 197745,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 197774,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 197776,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plat de brochettes de drake",
+    "profession": "Cuisine",
+    "tier": "Cuisine des îles aux Dragons",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 197764,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 197788,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Plateau de fromages et mines de Dornic",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Khaz Algar",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 212508,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 222737,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Brique de bienvenue terrestre en forme de fromage",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Khaz Algar",
+    "wood": 5,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 222737,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Pain de mine tranché de Dornic",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Khaz Algar",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 222739,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Assortiment de prédateur kaheti",
+    "profession": "Cuisine",
+    "tier": "Cuisine de Khaz Algar",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 221754,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 223971,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 222705,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 222731,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 259894,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tambour rituel zandalari",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Kul Tiras / Travail du cuir de Zandalar",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 154722,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 152513,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 154164,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière de diplomate furie-des-sables",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Kul Tiras / Travail du cuir de Zandalar",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 152541,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 152579,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 160059,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture taurène en cuir",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Legion",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 124113,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 124438,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet tauren",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Legion",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 124113,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 124438,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cadre de tannerie de Haut-Roc",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Legion",
+    "wood": 34,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 34,
+        "optional": false
+      },
+      {
+        "itemID": 124113,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 124116,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 124438,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lits superposés rochenoires",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Draenor",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 110609,
+        "qty": 45,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 120945,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lit de camp orc",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Draenor",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 110609,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 15,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tente du pic de la Sérénité",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Pandarie",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 72163,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 79255,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lit de sage pandaren",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Pandarie",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 72163,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 79254,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Mosaïque du Crépuscule en écailles",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Cataclysm",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 52979,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 56516,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 52190,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Selle de rechange gilnéenne",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Cataclysm",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 52980,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 38426,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis scarabée roulé",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Cataclysm",
+    "wood": 14,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 14,
+        "optional": false
+      },
+      {
+        "itemID": 56516,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 38426,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 52327,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Sac postal varleu",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir du Norfendre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 38425,
+        "qty": 14,
+        "optional": false
+      },
+      {
+        "itemID": 35623,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 35624,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Épouvantotem de la tribu Tombeneige",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir du Norfendre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 38425,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 35627,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 44128,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Épouvantail leurre arakkoa",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 23793,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 29539,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bannière mag’har de l’Outreterre",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir d’Outreterre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 25708,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 22452,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 21886,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis de Loch Modan en peau d’ours",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir classique",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 8170,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 15407,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis du camp Narache",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir classique",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 15417,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 2604,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 4342,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 14341,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis de margrave raccommodé en cuir",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir d’Ombreterre",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 172089,
+        "qty": 14,
+        "optional": false
+      },
+      {
+        "itemID": 172094,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 177062,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Caisse maldraxxi",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir d’Ombreterre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 171830,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 172089,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 172092,
+        "qty": 12,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lit gigogne draconique",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir des îles aux Dragons",
+    "wood": 45,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 45,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonnelle pliante de Valdrakken",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir des îles aux Dragons",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 193922,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tapis à zhévrures",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Khaz Algar",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 224764,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Canapé éclairé de l’Incontinental",
+    "profession": "Travail du cuir",
+    "tier": "Travail du cuir de Khaz Algar",
+    "wood": 38,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 38,
+        "optional": false
+      },
+      {
+        "itemID": 224764,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe bouteille de Boralus",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Kul Tiras / Alchimie de Zandalar",
+    "wood": 5,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 152511,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 152576,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cargaison de bouteilles zandalari",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Kul Tiras / Alchimie de Zandalar",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 152510,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bassin de clairvoyance étoilé",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Legion",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 124440,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 124105,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 127835,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fontaine sculptée de l’arcan’dor",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Legion",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 124106,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 127835,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 127838,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tonneau de vin",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Draenor",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 113262,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 117454,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 108996,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chaudron orc gangresang",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Draenor",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 127759,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 109119,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 108996,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cornue d’alchimiste pandarène",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Pandarie",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 72096,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 72237,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Kit d’alchimiste pandaren",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Pandarie",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 72234,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 76098,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 72238,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chaudron gilnéen",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Cataclysm",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 52326,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 56850,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 69237,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Potion verte gilnéenne",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Cataclysm",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 52329,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 52988,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 52985,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Orbe de sang san’layn",
+    "profession": "Alchimie",
+    "tier": "Alchimie du Norfendre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 36905,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 35627,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 36908,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Peste en boîte de la Couronne de glace",
+    "profession": "Alchimie",
+    "tier": "Alchimie du Norfendre",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 40077,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 33447,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 36908,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 35625,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 43102,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Flacon sin’dorei verni",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Outreterre",
+    "wood": 6,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 34440,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 23449,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Sac d’étouffante",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Outreterre",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 3820,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 21840,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Torche du Conseil des ombres",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Outreterre",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 22861,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 23573,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 21884,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bouteille d’alchimie arakkoa",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Outreterre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 22789,
+        "qty": 5,
+        "optional": false
+      },
+      {
+        "itemID": 22785,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Préparation d’alchimie arakkoa",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Outreterre",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 22794,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 22793,
+        "qty": 7,
+        "optional": false
+      },
+      {
+        "itemID": 22791,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Potion noire à bouchon",
+    "profession": "Alchimie",
+    "tier": "Alchimie classique",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 20520,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 2325,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Établi d’apothicaire",
+    "profession": "Alchimie",
+    "tier": "Alchimie classique",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 12808,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 12360,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 13468,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 3371,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Gland d’anima protégé par le voile",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Ombreterre",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 171292,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 177061,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 173170,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougies en malsuif",
+    "profession": "Alchimie",
+    "tier": "Alchimie d’Ombreterre",
+    "wood": 9,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 9,
+        "optional": false
+      },
+      {
+        "itemID": 171289,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 183953,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 173202,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bouteille d’élixir de dragon",
+    "profession": "Alchimie",
+    "tier": "Alchimie des îles aux Dragons",
+    "wood": 7,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 7,
+        "optional": false
+      },
+      {
+        "itemID": 194874,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Vase verdoyant de Valdrakken",
+    "profession": "Alchimie",
+    "tier": "Alchimie des îles aux Dragons",
+    "wood": 28,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 28,
+        "optional": false
+      },
+      {
+        "itemID": 190316,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bain de Sourceroc",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Khaz Algar",
+    "wood": 34,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 34,
+        "optional": false
+      },
+      {
+        "itemID": 221758,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 226205,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 213610,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Cornue d’alchimiste nérubienne",
+    "profession": "Alchimie",
+    "tier": "Alchimie de Khaz Algar",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 221763,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe-crâne embrasée zandalari",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Kul Tiras / Joaillerie de Zandalar",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 152512,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 154123,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 152513,
+        "qty": 5,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Petit masque de Bwonsamdi, le Loa des tombes",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Kul Tiras / Joaillerie de Zandalar",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 251768,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 154120,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 158187,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 152513,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fenêtre de Suramar ombragée",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Legion",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 124461,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 129100,
+        "qty": 20,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Assortiment de joaillerie de Suramar",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Legion",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251767,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 130176,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 151718,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 130181,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 151720,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 130182,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 127004,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bassin draenique",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Draenor",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 113262,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 115811,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir en draenéthyste",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Draenor",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251766,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 109118,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 111557,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 113261,
+        "qty": 2,
+        "optional": false
+      },
+      {
+        "itemID": 115805,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fontaine draconique du temple de Jade",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Pandarie",
+    "wood": 50,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 50,
+        "optional": false
+      },
+      {
+        "itemID": 83092,
+        "qty": 1,
+        "optional": false
+      },
+      {
+        "itemID": 72095,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 76734,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Mur pandaren en pierre",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Pandarie",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 72096,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Poteau pandaren en pierre",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Pandarie",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251763,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 72096,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 76061,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir à fumée",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Cataclysm",
+    "wood": 12,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 52193,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 53010,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 52078,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe à fumée",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Cataclysm",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251764,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 54849,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 52193,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 52078,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Table en verre du Kirin Tor",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie du Norfendre",
+    "wood": 22,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 22,
+        "optional": false
+      },
+      {
+        "itemID": 36916,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 42225,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chandelier solaire du Kirin Tor",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie du Norfendre",
+    "wood": 8,
+    "reagents": [
+      {
+        "itemID": 251762,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 36916,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 41266,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réverbère de Shattrath",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie d’Outreterre",
+    "wood": 20,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 31079,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 32230,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Bougeoir de Shattrath",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie d’Outreterre",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 10,
+        "optional": false
+      },
+      {
+        "itemID": 31079,
+        "qty": 3,
+        "optional": false
+      },
+      {
+        "itemID": 23441,
+        "qty": 3,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chandelier en cristal draeneï",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie d’Outreterre",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 242691,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 23573,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 25867,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Chandelier de Forgefer",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie classique",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 6037,
+        "qty": 12,
+        "optional": false
+      },
+      {
+        "itemID": 20963,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 12799,
+        "qty": 8,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Réverbère rochenoire",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie classique",
+    "wood": 40,
+    "reagents": [
+      {
+        "itemID": 245586,
+        "qty": 40,
+        "optional": false
+      },
+      {
+        "itemID": 11371,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 7910,
+        "qty": 20,
+        "optional": false
+      },
+      {
+        "itemID": 17011,
+        "qty": 6,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Lampe flottante kyriane",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie d’Ombreterre",
+    "wood": 18,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 18,
+        "optional": false
+      },
+      {
+        "itemID": 171829,
+        "qty": 6,
+        "optional": false
+      },
+      {
+        "itemID": 173173,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 172230,
+        "qty": 4,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Tablette runique maldraxxi",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie d’Ombreterre",
+    "wood": 30,
+    "reagents": [
+      {
+        "itemID": 251772,
+        "qty": 30,
+        "optional": false
+      },
+      {
+        "itemID": 171828,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 173172,
+        "qty": 8,
+        "optional": false
+      },
+      {
+        "itemID": 172232,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Trône doré de Valdrakken",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie des îles aux Dragons",
+    "wood": 26,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 26,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Clôture de Valdrakken",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie des îles aux Dragons",
+    "wood": 15,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 15,
+        "optional": false
+      },
+      {
+        "itemID": 192872,
+        "qty": 2,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Piquet de Valdrakken",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie des îles aux Dragons",
+    "wood": 10,
+    "reagents": [
+      {
+        "itemID": 251773,
+        "qty": 10,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Fenêtre ocre octogonale",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Khaz Algar",
+    "wood": 16,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 16,
+        "optional": false
+      },
+      {
+        "itemID": 212498,
+        "qty": 4,
+        "optional": false
+      },
+      {
+        "itemID": 221754,
+        "qty": 1,
+        "optional": false
+      }
+    ]
+  },
+  {
+    "decorName": "Candélabre de Gundargaz",
+    "profession": "Joaillerie",
+    "tier": "Joaillerie de Khaz Algar",
+    "wood": 25,
+    "reagents": [
+      {
+        "itemID": 248012,
+        "qty": 25,
+        "optional": false
+      },
+      {
+        "itemID": 212498,
+        "qty": 7,
+        "optional": false
+      }
+    ]
+  }
+]
