@@ -3,8 +3,7 @@
 ## Notes: Affiche combien de bois il reste à farm
 ## Author: Cordana
 ## Version: 1.0
-## SavedVariables: WoodTracker_Objectifs
-## SavedVariables: WoodTracker_Sync
+## SavedVariables: WoodTracker_Objectifs, WoodTracker_Sync, WoodTrackerDB
 
 libs/LibStub.lua
 libs/LibDataBroker-1.1.lua

@@ -1,7 +1,7 @@
 {
-  "version": "1.1.8",
-  "changelog": "Patchnotes:\n-Fix Addon",
-  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.1.8/WoodTracker-win-x64.zip",
+  "version": "1.1.9",
+  "changelog": "Patchnotes:\n-Fix Addon ENCORE",
+  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.1.9/WoodTracker-win-x64.zip",
   "addon_updated": true
 }
 
