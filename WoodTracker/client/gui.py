@@ -23,7 +23,7 @@ from config import get_appdata_dir
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Cordour/WoodTracker/main/version.json"
 
 
-APP_VERSION = "1.1.6"
+APP_VERSION = "1.1.7"
 
 def check_update():
     r = requests.get(GITHUB_VERSION_URL, timeout=5)
@@ -232,11 +232,11 @@ class WoodTrackerGUI(tk.Tk):
         if data.get("addon_updated"):
             tk.Label(
                 win,
-                text="⚠ Cette mise à jour inclut aussi une mise à jour de l’addon World of Warcraft. Vous conservez toutefois vos réglages.",
+                text="⚠ Cette mise à jour inclut aussi une mise à jour de l’addon World of Warcraft. \nVous conservez toutefois vos réglages.",
                 bg=BG_MAIN,
                 fg="#ffb300",
                 font=("Segoe UI", 9, "bold"),
-                wraplength=420,
+                wraplength=500,
                 justify="left",
             ).pack(anchor="w", padx=16, pady=(0, 8))
 
