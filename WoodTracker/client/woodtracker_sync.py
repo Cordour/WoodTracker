@@ -52,39 +52,26 @@ def log(msg):
 def run_sync(log_cb=default_log, progress_cb=default_progress):
     sheet_id = get_sheet_id()
     if not sheet_id:
-        raise RuntimeError(
-            "Aucun Google Sheet configuré. "
-            "Veuillez renseigner l’ID de votre Sheet."
-        )
+        raise RuntimeError("Aucun Google Sheet configuré")
+
     # 1️⃣ Connexion Google
     log_cb("Connexion à Google Sheets")
     progress_cb(10)
     sheet = get_sheet(sheet_id, SHEET_NAME)
 
-    log_cb("Lecture des objectifs depuis Google Sheets")
-    progress_cb(30)
-    objectifs = read_objectifs(sheet)
-
-    # 3️⃣ Écriture objectifs.lua
-    log_cb("Génération de objectifs.lua")
-    progress_cb(50)
-    write_objectifs_lua(objectifs)
-
-    # 4️⃣ Lecture SavedVariables / Push Sheets
+    # 2️⃣ WoW → Google Sheets (SI WoW FERMÉ)
     if is_wow_running():
         log_cb(
             "⚠ WoW est ouvert : "
-            "Les objectifs ont été mis à jour, "
-            "mais le bois total que vous possédez "
-            "ne peut pas être envoyé vers Google Sheets."
+            "les données en jeu ne peuvent pas être envoyées."
         )
     else:
         log_cb("Lecture des SavedVariables WoW")
-        progress_cb(70)
+        progress_cb(30)
         sync = load_sync_data()
 
         log_cb("Synchronisation WoW → Google Sheets")
-        progress_cb(100)
+        progress_cb(50)
         push_totals_to_sheet(
             sheet,
             sync["data"],
@@ -92,7 +79,17 @@ def run_sync(log_cb=default_log, progress_cb=default_progress):
             dry_run=False
         )
 
-    # 5️⃣ Lecture des totaux depuis Sheets (SOURCE DE VÉRITÉ)
+    # 3️⃣ Lecture des objectifs depuis Google Sheets
+    log_cb("Lecture des objectifs depuis Google Sheets")
+    progress_cb(70)
+    objectifs = read_objectifs(sheet)
+
+    # 4️⃣ Écriture objectifs.lua
+    log_cb("Génération de objectifs.lua")
+    progress_cb(85)
+    write_objectifs_lua(objectifs)
+
+    # 5️⃣ Lecture finale (source de vérité UI)
     totals = read_totals_from_sheet(sheet)
 
     result = {}
@@ -102,7 +99,9 @@ def run_sync(log_cb=default_log, progress_cb=default_progress):
             "objectif": objectifs.get(key, 0),
             "itemID": EXTENSIONS[key]["itemID"],
         }
+
     log_cb("✔ Synchronisation terminée")
+    progress_cb(100)
     return result
 
     

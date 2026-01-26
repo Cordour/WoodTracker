@@ -206,7 +206,7 @@ ExportToSavedVariables = function()
 
     WoodTracker_Sync.timestamp = time()
     WoodTracker_Sync.timestamp_iso = date("%Y-%m-%d %H:%M:%S")
-
+    WoodTracker_Sync.heartbeat = time()
     WoodTracker_Sync.data = {}
 
     for _, key in ipairs(ordre) do

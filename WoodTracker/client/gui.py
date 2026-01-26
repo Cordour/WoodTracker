@@ -13,15 +13,15 @@ import webbrowser
 from tkinter import filedialog, messagebox
 from config import set_wow_addon_dir
 from config import get_wow_addon_dir
-from paths import is_wow_running
 from woodtracker_sync import sync_bdd_blizzard
 from utils import resource_path
 import requests
 import subprocess
-
+from paths import is_wow_running, is_wow_alive_via_heartbeat
+from config import get_appdata_dir
 
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Cordour/WoodTracker/main/version.json"
-GITHUB_RELEASE_EXE = "https://github.com/Cordour/WoodTracker/releases/download/v1.2.0/WoodTracker.exe"
+
 
 APP_VERSION = "1.1.6"
 
@@ -92,17 +92,7 @@ del "%~f0"
 
 
 
-def check_updates_ui(self):
-    try:
-        data = check_update()
-        if is_newer(data["version"], APP_VERSION):
-            if messagebox.askyesno(
-                "Mise à jour disponible",
-                f"Version {data['version']} disponible\n\n{data['changelog']}\n\nMettre à jour ?"
-            ):
-                launch_patcher()
-    except Exception:
-        pass
+
 
 
 def is_newer(remote, local):
@@ -121,6 +111,8 @@ FG_TEXT = "#e6e6e6"
 ACCENT = "#3fa9f5"
 HONEY = "#f4b400"      # miel doré (Google-like)
 HONEY_DARK = "#d89b00" # hover / actif
+
+
 
 
 
@@ -175,6 +167,8 @@ class WoodTrackerGUI(tk.Tk):
         self._wow_opened_at = None
         self.sync_running = False
         self.had_warning = False
+        self.after(500, self._maybe_update_addon)
+        self._update_button_shown = False
 
         self._build_header()
         self._build_content()
@@ -207,10 +201,122 @@ class WoodTrackerGUI(tk.Tk):
         self._wow_was_running = is_wow_running()
         self.after(3000, self._watch_wow_process)
 
+    def open_patchnotes_window(self, data):
+        win = tk.Toplevel(self)
+        win.title(f"Mise à jour v{data['version']}")
+        win.resizable(False, False)
+        win.configure(bg=BG_MAIN)
+        win.transient(self)
+        win.grab_set()
 
+        def on_close():
+            self.update_button.config(state="normal")
+            win.destroy()
+
+        win.protocol("WM_DELETE_WINDOW", on_close)
+
+        # Titre
+        tk.Label(
+            win,
+            text=f"Patch notes – v{data['version']}",
+            bg=BG_MAIN,
+            fg=FG_TEXT,
+            font=("Segoe UI", 12, "bold"),
+        ).pack(anchor="w", padx=16, pady=(16, 8))
+
+        # ⚠ Avertissement addon
+        if data.get("addon_updated"):
+            tk.Label(
+                win,
+                text="⚠ Cette mise à jour inclut une mise à jour de l’addon World of Warcraft.",
+                bg=BG_MAIN,
+                fg="#ffb300",
+                font=("Segoe UI", 9, "bold"),
+                wraplength=420,
+                justify="left",
+            ).pack(anchor="w", padx=16, pady=(0, 8))
+
+        # Zone texte scrollable
+        frame = tk.Frame(win, bg=BG_PANEL)
+        frame.pack(fill="both", expand=True, padx=16)
+
+        text = tk.Text(
+            frame,
+            bg=BG_MAIN,
+            fg=FG_TEXT,
+            relief="flat",
+            font=("Consolas", 9),
+            wrap="word",
+            height=12,
+        )
+        text.pack(side="left", fill="both", expand=True)
+
+        scrollbar = ttk.Scrollbar(frame, command=text.yview)
+        scrollbar.pack(side="right", fill="y")
+        text.config(yscrollcommand=scrollbar.set)
+
+        text.insert("1.0", data.get("changelog", ""))
+        text.configure(state="disabled")
+
+        # Boutons
+        btn_frame = tk.Frame(win, bg=BG_MAIN)
+        btn_frame.pack(fill="x", padx=16, pady=16)
+
+        tk.Button(
+            btn_frame,
+            text="❌ Plus tard",
+            bg=BG_PANEL,
+            fg=FG_TEXT,
+            relief="flat",
+            command=on_close,
+        ).pack(side="right", padx=(8, 0))
+
+        tk.Button(
+            btn_frame,
+            text="✅ Mettre à jour",
+            bg=HONEY,
+            fg="#1e2126",
+            relief="flat",
+            font=("Segoe UI", 9, "bold"),
+            command=lambda: self._confirm_update(data, win),
+        ).pack(side="right")
+
+        win.update_idletasks()
+        win.minsize(win.winfo_width(), win.winfo_height())
+
+
+
+    def _confirm_update(self, data, win):
+        win.destroy()
+
+        if data.get("addon_updated"):
+            flag = get_appdata_dir() / "update_addon.flag"
+            flag.write_text("1")
+
+        launch_patcher(data["zip_url"])
+
+
+
+    def _maybe_update_addon(self):
+        flag = get_appdata_dir() / "update_addon.flag"
+        if not flag.exists():
+            return
+
+        try:
+            from utils import install_addon
+            self.log_cb("📦 Mise à jour de l’addon WoodTracker…")
+            install_addon(self.log_cb)
+            self.log_cb("✔ Addon mis à jour avec succès")
+        except Exception as e:
+            self.log_cb(f"❌ Mise à jour addon échouée : {e}")
+        finally:
+            flag.unlink(missing_ok=True)
 
     def _watch_wow_process(self):
-        wow_running = is_wow_running()
+        wow_running = (
+            is_wow_alive_via_heartbeat()
+            or is_wow_running()  # fallback sécurité
+        )
 
         # 🎮 WoW vient de s’ouvrir
         if wow_running and not self._wow_was_running:
@@ -238,37 +344,46 @@ class WoodTrackerGUI(tk.Tk):
         self._wow_was_running = wow_running
         self.after(3000, self._watch_wow_process)
 
-    def check_update():
-        r = requests.get(GITHUB_VERSION_URL, timeout=5)
-        print("RAW VERSION.JSON ↓↓↓")
-        print(repr(r.text))
-        r.raise_for_status()
-        return r.json()
     
     def _check_updates_startup(self):
         try:
             data = check_update()
+
+            version = data.get("version")
+            if not version:
+                self.log_cb("❌ version.json invalide")
+                return
+
             self.log_cb(
-                f"🧪 Version locale: {APP_VERSION} | distante: {data['version']}"
+                f"🧪 Version locale: {APP_VERSION} | distante: {version}"
             )
 
-            if is_newer(data["version"], APP_VERSION):
+            if is_newer(version, APP_VERSION):
                 self.update_available = True
                 self._show_update_button()
-                self.log_cb(f"🔄 Mise à jour disponible : v{data['version']}")
-                self.log_cb("ℹ Une mise à jour est disponible — la synchronisation automatique est en pause")
+                self.log_cb(f"🔄 Mise à jour disponible : v{version}")
+                self.log_cb(
+                    "ℹ Une mise à jour est disponible — la synchronisation automatique est en pause"
+                )
             else:
                 self.log_cb("✅ WoodTracker est à jour")
+
         except Exception as e:
             self.log_cb(f"❌ Update check error: {e}")
 
 
 
+
     def _show_update_button(self):
+        if self._update_button_shown:
+            return
+
+        self._update_button_shown = True
         self.update_button.pack(side="right", padx=16)
         self._update_blink_on = False
         self._update_blink_active = True
         self._blink_update_button()
+
 
 
     def _blink_update_button(self):
@@ -284,13 +399,23 @@ class WoodTrackerGUI(tk.Tk):
 
         
     def _on_update_click(self):
-        if messagebox.askyesno(
-            "Mise à jour disponible",
-            "Une nouvelle version de WoodTracker est disponible.\n\n"
-            "Souhaitez-vous mettre à jour maintenant ?"
-        ):
-            data = check_update()
-            launch_patcher(data["zip_url"])
+        self.update_button.config(state="disabled")
+        self._update_blink_active = False
+        self.update_button.config(bg=BG_PANEL)
+
+        def worker():
+            try:
+                data = check_update()
+                self.after(0, lambda: self.open_patchnotes_window(data))
+            except Exception as e:
+                self.after(0, lambda: (
+                    self.log_cb(f"❌ Update check error: {e}"),
+                    self.update_button.config(state="normal")
+                ))
+
+        threading.Thread(target=worker, daemon=True).start()
+
+
 
 
     def install_addon_ui(self):

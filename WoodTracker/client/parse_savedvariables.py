@@ -92,6 +92,8 @@ def load_sync_data():
 
     checksum = int(checksum_match.group(1))
     timestamp_iso = ts_iso_match.group(1)
+    heartbeat_match = re.search(r'\["heartbeat"\]\s*=\s*(\d+)', lua_block)
+    heartbeat = int(heartbeat_match.group(1)) if heartbeat_match else None
 
     # 🔐 Validation checksum
     if sum(data.values()) != checksum:
@@ -102,6 +104,7 @@ def load_sync_data():
         "meta": meta,
         "checksum": checksum,
         "timestamp_iso": timestamp_iso,
+        "heartbeat": heartbeat,
     }
 if __name__ == "__main__":
     sync = load_sync_data()
