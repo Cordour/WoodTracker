@@ -1,7 +1,7 @@
 {
-  "version": "1.1.7",
-  "changelog": "Patchnotes exe:\n-Affiche la version au lancement\n-Fix suivi ouverture/fermeture du jeu\n-Changement de l'ordre des synchronisation, désormais les données de vos personnages sont récupérées en premier.\n-Mis à jour de l'outil de maj. Maj auto de l'addon in game.\n-Ajout Patchnotes\n\nPatchnotes Addon:\n-Ajout d'un onglet option.\n-Ajout d'une fonction clic droit icône pour options\n-Ajout commandes /wt et /woodtracker pour accéder aux options.\n-Ajout d'une fonctionnalité de réduction d'opacité lors du vol. Désactivable et réglable dans les options.",
-  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.1.7/WoodTracker-win-x64.zip",
+  "version": "1.1.8",
+  "changelog": "Patchnotes:-\nFix Addon",
+  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.1.8/WoodTracker-win-x64.zip",
   "addon_updated": true
 }
 

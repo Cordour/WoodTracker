@@ -23,7 +23,7 @@ from config import get_appdata_dir
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Cordour/WoodTracker/main/version.json"
 
 
-APP_VERSION = "1.1.7"
+APP_VERSION = "1.1.8"
 
 def check_update():
     r = requests.get(GITHUB_VERSION_URL, timeout=5)
