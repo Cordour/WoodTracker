@@ -126,6 +126,28 @@ async function fetchBlizzard(path, token, retries = 3) {
   return res.json();
 }
 
+
+async function searchItemByName(token, name) {
+  const url =
+    "https://eu.api.blizzard.com/data/wow/search/item" +
+    "?namespace=static-eu" +
+    "&locale=fr_FR" +
+    `&name.fr_FR=${encodeURIComponent(name)}`;
+
+  const res = await fetch(url, {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  });
+
+  if (!res.ok) {
+    throw new Error(`Item search failed (${res.status})`);
+  }
+
+  const data = await res.json();
+  return data.results?.[0]?.data?.id ?? null;
+}
+
 /* ===========================
    AUTH
 =========================== */
@@ -222,6 +244,9 @@ async function fetchRecipe(token, recipeId) {
   console.log("▶ Auth Blizzard...");
   const token = await getAccessToken();
 
+  
+  const ITEM_ID_CACHE = {};
+
   console.log("▶ Fetch professions...");
   const professions = await fetchProfessions(token);
 
@@ -251,7 +276,6 @@ async function fetchRecipe(token, recipeId) {
         errorCount++;
         continue;
       }
-
       const tasks = recipes.map(r => async () => {
         try {
           let recipe;
@@ -273,15 +297,32 @@ async function fetchRecipe(token, recipeId) {
           // ⛔ TEMPORAIRE : on retourne TOUT ce qui a du bois
           if (wood > 0) {
             stats.returned++;
+            let itemID = recipe.crafted_item?.id ?? null;
+
+            if (!itemID) {
+              if (ITEM_ID_CACHE[recipe.name]) {
+                itemID = ITEM_ID_CACHE[recipe.name];
+              } else {
+                itemID = await searchItemByName(token, recipe.name);
+                ITEM_ID_CACHE[recipe.name] = itemID;
+              }
+            }
+
+            if (!itemID) {
+              console.warn(`⚠ itemID introuvable pour ${recipe.name}`);
+              return null;
+            }
             decorBuffer.push({
               professionId: prof.id,
               profession: prof.name,
               tierId: tier.id,
               tier: tier.name,
+              recipeId: recipe.id,   // ✅ AJOUT
               name: recipe.name,
               wood,
-              itemID: recipe.crafted_item?.id ?? null
+              itemID
             });
+
           }
 
 
