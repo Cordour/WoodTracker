@@ -17,7 +17,7 @@ from woodtracker_sync import sync_bdd_blizzard
 from utils import resource_path
 import requests
 import subprocess
-from paths import is_wow_running, is_wow_alive_via_heartbeat
+from wow_status import is_wow_alive_via_heartbeat
 from config import get_appdata_dir
 from CraftCostCalculator import run as run_craft_cost
 
@@ -206,7 +206,7 @@ class WoodTrackerGUI(tk.Tk):
 
         self.after(1200, _maybe_autosync)
         
-        self._wow_was_running = is_wow_running()
+        self._wow_was_running = is_wow_alive_via_heartbeat()
         self.after(3000, self._watch_wow_process)
 
     def _auto_craft_timer(self):
@@ -344,7 +344,7 @@ class WoodTrackerGUI(tk.Tk):
     def _watch_wow_process(self):
         wow_running = (
             is_wow_alive_via_heartbeat()
-            or is_wow_running()  # fallback sécurité
+            or is_wow_alive_via_heartbeat()  # fallback sécurité
         )
 
         # 🎮 WoW vient de s’ouvrir
@@ -1088,20 +1088,6 @@ class WoodTrackerGUI(tk.Tk):
         # ⛔ déjà en cours
         if self._craft_running:
             self.log_cb("⏳ Calcul déjà en cours")
-            return
-
-        # ⏱️ cooldown
-        if (
-            not force
-            and self.last_craft_ts
-            and now - self.last_craft_ts < self._craft_cooldown_sec
-        ):
-            remaining = int(
-                self._craft_cooldown_sec - (now - self.last_craft_ts)
-            )
-            self.log_cb(
-                f"⏱️ Recalcul possible dans {remaining}s"
-            )
             return
 
         self._craft_running = True

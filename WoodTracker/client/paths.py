@@ -1,20 +1,8 @@
 from pathlib import Path
 import os
 import psutil
-import time
-from parse_savedvariables import load_sync_data
-HEARTBEAT_TIMEOUT = 15  # secondes
 
 
-def is_wow_alive_via_heartbeat():
-    try:
-        sync = load_sync_data()
-        hb = sync.get("heartbeat")
-        if not hb:
-            return False
-        return (time.time() - hb) < HEARTBEAT_TIMEOUT
-    except Exception:
-        return False
 def find_wow_root():
     candidates = [
         Path(os.environ.get("PROGRAMFILES(X86)", "")) / "World of Warcraft",
@@ -35,7 +23,6 @@ def find_savedvariables_file():
     if not account_dir.exists():
         raise FileNotFoundError("Dossier WTF/Account introuvable")
 
-    # On accepte plusieurs noms possibles
     patterns = [
         "*/SavedVariables/WoodTracker.lua",
         "*/SavedVariables/WoodTracker_Sync.lua",
@@ -50,10 +37,8 @@ def find_savedvariables_file():
             "Aucun fichier SavedVariables WoodTracker trouvé"
         )
 
-    # On prend le plus récent (le plus sûr)
     matches.sort(key=lambda p: p.stat().st_mtime, reverse=True)
     return matches[0]
-
 
 
 def find_objectifs_lua():
@@ -67,10 +52,14 @@ def find_objectifs_lua():
     )
 
 
-
 def is_wow_running():
     for p in psutil.process_iter(["name"]):
         name = p.info.get("name")
         if name and name.lower() == "wow.exe":
             return True
     return False
+
+
+def get_wow_savedvariables_dir():
+    retail = find_wow_root()
+    return retail / "WTF" / "Account"

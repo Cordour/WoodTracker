@@ -6,6 +6,8 @@
 import "dotenv/config";
 import fs from "fs";
 
+
+const COMPONENT_ITEM_IDS = new Set();
 const CONCURRENCY_LIMIT = 16;
 const OUTPUT_FILE = "decor.json";
 
@@ -224,6 +226,34 @@ async function fetchTierRecipes(token, professionId, tierId) {
 async function fetchRecipe(token, recipeId) {
   return fetchBlizzard(`/data/wow/recipe/${recipeId}`, token);
 }
+
+function writeComponentItemIDsLua() {
+  const ids = [...COMPONENT_ITEM_IDS].sort((a, b) => a - b);
+
+  const lua = [
+    "--  AUTO-GÉNÉRÉ — NE PAS MODIFIER",
+    "WoodTracker_ComponentItemIDs = {",
+    ...ids.map(id => `  ${id},`),
+    "}",
+    ""
+  ].join("\n");
+
+  const dirPath = new URL(
+    "../client/addon/WoodTracker/generated/",
+    import.meta.url
+  );
+
+  fs.mkdirSync(dirPath, { recursive: true });
+
+  const outputPath = new URL(
+    "component_item_ids.lua",
+    dirPath
+  );
+
+  fs.writeFileSync(outputPath, lua, "utf8");
+  console.log(`🧩 component_item_ids.lua généré (${ids.length} IDs)`);
+}
+
 function writeDecorItemIDsLua(decorBuffer) {
   const ids = [
     ...new Set(
@@ -234,7 +264,7 @@ function writeDecorItemIDsLua(decorBuffer) {
   ];
 
   const lua = [
-    "-- ⚠️ AUTO-GÉNÉRÉ — NE PAS MODIFIER",
+    "--  AUTO-GÉNÉRÉ — NE PAS MODIFIER",
     "WoodTracker_DecorItemIDs = {",
     ...ids.map(id => `  ${id},`),
     "}",
@@ -258,6 +288,30 @@ function writeDecorItemIDsLua(decorBuffer) {
   fs.writeFileSync(outputPath, lua, "utf8");
   console.log(`🧩 decor_item_ids.lua généré (${ids.length} IDs)`);
 }
+
+function collectComponentIDs(recipe) {
+  if (!recipe) return;
+
+  // reagents simples
+  if (Array.isArray(recipe.reagents)) {
+    for (const r of recipe.reagents) {
+      const id = r?.reagent?.id;
+      if (id) COMPONENT_ITEM_IDS.add(id);
+    }
+  }
+
+  // reagent slots (choix multiples)
+  if (Array.isArray(recipe.reagent_slots)) {
+    for (const slot of recipe.reagent_slots) {
+      if (!Array.isArray(slot.reagents)) continue;
+      for (const r of slot.reagents) {
+        const id = r?.reagent?.id;
+        if (id) COMPONENT_ITEM_IDS.add(id);
+      }
+    }
+  }
+}
+
 
 /* ===========================
    MAIN
@@ -329,6 +383,7 @@ function writeDecorItemIDsLua(decorBuffer) {
 
           // ⛔ TEMPORAIRE : on retourne TOUT ce qui a du bois
           if (wood > 0) {
+            collectComponentIDs(recipe);
             stats.returned++;
             let itemID = recipe.crafted_item?.id ?? null;
 
@@ -385,6 +440,8 @@ function writeDecorItemIDsLua(decorBuffer) {
     );
     
     writeDecorItemIDsLua(decorBuffer);
+    writeComponentItemIDsLua();
+
 
   const duration = ((Date.now() - start) / 1000).toFixed(1);
 

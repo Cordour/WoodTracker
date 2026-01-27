@@ -1,14 +1,29 @@
 import re
 from pathlib import Path
+
 from config import get_wow_addon_dir
+from paths import get_wow_savedvariables_dir
+
 
 TABLE_NAME = "WoodTracker_Sync"
 
 
+# ============================================================
+# UTIL
+# ============================================================
+
+def _log(msg, log_cb):
+    if log_cb:
+        log_cb(msg)
+
+
+# ============================================================
+# SYNC DATA (WoodTracker.lua)
+# ============================================================
+
 def find_savedvariables_file() -> Path:
     addon_dir = Path(get_wow_addon_dir()).resolve()
 
-    # Remonte jusqu'à _retail_
     retail_dir = addon_dir
     while retail_dir.name.lower() != "_retail_":
         if retail_dir.parent == retail_dir:
@@ -16,7 +31,6 @@ def find_savedvariables_file() -> Path:
         retail_dir = retail_dir.parent
 
     accounts_dir = retail_dir / "WTF" / "Account"
-
     if not accounts_dir.exists():
         raise FileNotFoundError(f"Dossier introuvable : {accounts_dir}")
 
@@ -29,11 +43,10 @@ def find_savedvariables_file() -> Path:
     if not candidates:
         raise FileNotFoundError(
             "WoodTracker.lua introuvable.\n"
-            "Lancez WoW au moins une fois avec l’addon activé, puis fermez le jeu."
+            "Lance WoW au moins une fois avec l’addon activé, puis ferme le jeu."
         )
 
     return max(candidates, key=lambda p: p.stat().st_mtime)
-
 
 
 def extract_table(text: str, table_name: str) -> str:
@@ -87,15 +100,11 @@ def load_sync_data():
     data = parse_simple_table(data_block.group(1))
     meta = parse_simple_table(meta_block.group(1))
 
-    checksum_match = re.search(r'\["checksum"\]\s*=\s*(\d+)', lua_block)
-    ts_iso_match = re.search(r'\["timestamp_iso"\]\s*=\s*"([^"]+)"', lua_block)
-
-    checksum = int(checksum_match.group(1))
-    timestamp_iso = ts_iso_match.group(1)
+    checksum = int(re.search(r'\["checksum"\]\s*=\s*(\d+)', lua_block).group(1))
+    timestamp_iso = re.search(r'\["timestamp_iso"\]\s*=\s*"([^"]+)"', lua_block).group(1)
     heartbeat_match = re.search(r'\["heartbeat"\]\s*=\s*(\d+)', lua_block)
     heartbeat = int(heartbeat_match.group(1)) if heartbeat_match else None
 
-    # 🔐 Validation checksum
     if sum(data.values()) != checksum:
         raise ValueError("Checksum invalide")
 
@@ -106,11 +115,65 @@ def load_sync_data():
         "timestamp_iso": timestamp_iso,
         "heartbeat": heartbeat,
     }
+
+
+# ============================================================
+# AH PRICES (WoodTracker_AHBridge.lua)
+# ============================================================
+
+def load_ah_prices(log_cb=None):
+    base = get_wow_savedvariables_dir()
+
+    candidates = []
+    for account_dir in base.iterdir():
+        sv = account_dir / "SavedVariables" / "WoodTracker_AHBridge.lua"
+        if sv.exists():
+            candidates.append(sv)
+
+    if not candidates:
+        raise RuntimeError(
+            "SavedVariables WoodTracker_AHBridge introuvable.\n"
+            "👉 Ouvre l’HV en jeu puis ferme WoW."
+        )
+
+    path = max(candidates, key=lambda p: p.stat().st_mtime)
+    _log(f"[AH] Fichier utilisé : {path}", log_cb)
+
+    text = path.read_text(encoding="utf-8")
+
+    if "WoodTracker_AH_DB" not in text:
+        raise RuntimeError("Table WoodTracker_AH_DB introuvable")
+
+    table_block = extract_table(text, "WoodTracker_AH_DB")
+
+    prices = {}
+
+    pattern = re.compile(
+        r"\[(\d+)\]\s*=\s*\{\s*"
+        r'\["price"\]\s*=\s*(\d+),\s*'
+        r'\["timestamp"\]\s*=\s*(\d+),?\s*'
+        r"\},?",
+        re.S,
+    )
+
+    for item_id, price, ts in pattern.findall(table_block):
+        prices[int(item_id)] = {
+            "price": int(price),
+            "timestamp": int(ts),
+        }
+
+    _log(f"[AH] Items AH chargés : {len(prices)}", log_cb)
+    return prices
+
+
+# ============================================================
+# MAIN (debug standalone)
+# ============================================================
+
 if __name__ == "__main__":
     sync = load_sync_data()
     print("✔ Sync chargée")
-    print("Compte détecté :", sync["meta"].get("account"))
+    print("Compte :", sync["meta"].get("account"))
     print("Perso :", sync["meta"].get("character"))
     print("Royaume :", sync["meta"].get("realm"))
     print("Timestamp :", sync["timestamp_iso"])
-    print("Données :", sync["data"])

@@ -7,7 +7,7 @@ from urllib.parse import quote
 from utils import resource_path
 from google_oauth import get_gspread_client
 from parse_savedvariables import load_sync_data
-from paths import is_wow_running
+from wow_status import is_wow_alive_via_heartbeat
 from config import get_sheet_id, get_wow_addon_dir
 import gspread
 
@@ -60,7 +60,7 @@ def run_sync(log_cb=default_log, progress_cb=default_progress):
     sheet = get_sheet(sheet_id, SHEET_NAME)
 
     # 2️⃣ WoW → Google Sheets (SI WoW FERMÉ)
-    if is_wow_running():
+    if is_wow_alive_via_heartbeat():
         log_cb(
             "⚠ WoW est ouvert : "
             "les données en jeu ne peuvent pas être envoyées."
@@ -189,6 +189,65 @@ def write_objectifs_lua(objectifs):
             )
         f.write("}\n")
 
+def copy_component_item_ids_to_addon():
+    from config import get_wow_addon_dir
+    from pathlib import Path
+
+    source = (
+        Path(__file__).resolve().parent
+        / "addon"
+        / "WoodTracker"
+        / "generated"
+        / "component_item_ids.lua"
+    )
+
+    if not source.exists():
+        raise RuntimeError("component_item_ids.lua non généré côté Node")
+
+    woodtracker_dir = Path(get_wow_addon_dir())
+    ahbridge_dir = woodtracker_dir.parent / "WoodTracker_AHBridge"
+
+    for addon_dir in (woodtracker_dir, ahbridge_dir):
+        generated_dir = addon_dir / "generated"
+        generated_dir.mkdir(parents=True, exist_ok=True)
+
+        target = generated_dir / "component_item_ids.lua"
+        target.write_bytes(source.read_bytes())
+
+def write_decor_item_ids_to_addon(data):
+    from config import get_wow_addon_dir
+    from pathlib import Path
+
+    woodtracker_dir = Path(get_wow_addon_dir())
+    ahbridge_dir = woodtracker_dir.parent / "WoodTracker_AHBridge"
+
+    # 1️⃣ Construire le contenu UNE SEULE FOIS
+    ids = sorted({
+        item["itemID"]
+        for item in data
+        if item.get("itemID")
+    })
+
+    lines = [
+        "-- AUTO-GENERE - NE PAS MODIFIER",
+        "",
+        "WoodTracker_DecorItemIDs = {",
+        *[f"  {item_id}," for item_id in ids],
+        "}",
+        "",
+    ]
+
+    content = "\n".join(lines)
+
+    # 2️⃣ Écrire dans CHAQUE addon
+    for addon_dir in (woodtracker_dir, ahbridge_dir):
+        generated_dir = addon_dir / "generated"
+        generated_dir.mkdir(parents=True, exist_ok=True)
+
+        lua_path = generated_dir / "decor_item_ids.lua"
+
+        with open(lua_path, "wb") as f:
+            f.write(content.encode("ascii"))
 
 
 
@@ -291,6 +350,10 @@ def sync_bdd_blizzard(log_cb=default_log):
         raise RuntimeError("decor.json non généré")
 
     data = json.loads(json_path.read_text(encoding="utf-8"))
+    write_decor_item_ids_to_addon(data)
+    log_cb("🧩 decor_item_ids.lua mis à jour dans l’addon WoW")
+    copy_component_item_ids_to_addon()
+    log_cb("🧩 component_item_ids.lua copié dans l’addon WoW")
 
     # 4️⃣ Construire les lignes Google Sheets
     rows = []

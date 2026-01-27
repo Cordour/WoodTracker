@@ -22,6 +22,7 @@ for pkg in [
     "gspread",
     "google.auth",
     "google_auth_oauthlib",
+    "googleapiclient",
 ]:
     d, b, h = collect_all(pkg)
     datas += d
@@ -45,8 +46,10 @@ datas += [
 # Modules internes (fichiers .py dans client/)
 # ======================================================
 hiddenimports += [
-    "utils",               # client/utils.py
-    "woodtracker_sync",    # client/woodtracker_sync.py
+    "utils",
+    "woodtracker_sync",
+    "google.oauth2.credentials",
+    "google.auth.transport.requests",
 ]
 
 # ======================================================
