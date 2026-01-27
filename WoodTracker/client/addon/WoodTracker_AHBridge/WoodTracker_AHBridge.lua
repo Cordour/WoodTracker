@@ -68,7 +68,7 @@ function WoodTracker_StartAHScan()
   WoodTracker_AH_State.total = #queue
   WoodTracker_AH_State.current = 0
 
-  print(" WoodTracker : scan AH de", #queue, "items")
+  print("WoodTracker : scan AH de", #queue, "items")
 
   C_Timer.NewTicker(SCAN_DELAY, function(ticker)
     local itemID = queue[index]
