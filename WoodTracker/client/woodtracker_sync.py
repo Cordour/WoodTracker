@@ -89,16 +89,23 @@ def run_sync(log_cb=default_log, progress_cb=default_progress):
     progress_cb(85)
     write_objectifs_lua(objectifs)
 
-    # 5️⃣ Lecture finale (source de vérité UI)
-    totals = read_totals_from_sheet(sheet)
-
+    # 5️⃣ Construction du résultat FINAL (UI)
     result = {}
+
+    wow_totals = sync["data"] if not is_wow_alive_via_heartbeat() else {}
+
     for key in EXTENSION_ORDER:
+        wow_key = f"Bois_{key}"
+
+        total = wow_totals.get(wow_key, 0)
+        objectif = objectifs.get(key, 0)
+
         result[key] = {
-            "total": totals.get(key, 0),
-            "objectif": objectifs.get(key, 0),
+            "total": total,                  # ✅ TOUJOURS WoW
+            "objectif": objectif,            # ✅ TOUJOURS Sheet
             "itemID": EXTENSIONS[key]["itemID"],
         }
+
 
     log_cb("✔ Synchronisation terminée")
     progress_cb(100)

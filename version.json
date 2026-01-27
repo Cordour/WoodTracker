@@ -1,7 +1,7 @@
 {
-  "version": "1.2.1",
-  "changelog": "Patchnotes :\n\nEXE:\n-Rework complet de la manière de spy les données de l'AH. Cette fonctionalité requiert l'addon 'Auctionator' pour fonctionner.\nIl vous faut lancer un scan avec Auctionator, lancer un scan avec le bouton in game de woodtracker (même onglet qu'Auctionator)\nPuis cliquer sur le bouton maj AH sur votre Woodtracker.\n\nSHEETS : \n-Fix des prix onglet rentabilité, fonctionel et très précis.",
-  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.2.1/WoodTracker.zip",
+  "version": "1.2.2",
+  "changelog": "Patchnotes 1.2.2 :\n-Fix bug bois restant\n\nPatchnotes 1.2.1 :\n\nEXE:\n-Rework complet de la manière de spy les données de l'AH. Cette fonctionalité requiert l'addon 'Auctionator' pour fonctionner.\nIl vous faut lancer un scan avec Auctionator, lancer un scan avec le bouton in game de woodtracker (même onglet qu'Auctionator)\nPuis cliquer sur le bouton maj AH sur votre Woodtracker.\n\nSHEETS : \n-Fix des prix onglet rentabilité, fonctionel et très précis.",
+  "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.2.2/WoodTracker.zip",
   "addon_updated": true
 }
 

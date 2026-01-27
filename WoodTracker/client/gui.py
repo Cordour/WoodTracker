@@ -25,7 +25,7 @@ from CraftCostCalculator import run as run_craft_cost
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Cordour/WoodTracker/main/version.json"
 
 
-APP_VERSION = "1.2.1"
+APP_VERSION = "1.2.2"
 
 def check_update():
     r = requests.get(GITHUB_VERSION_URL, timeout=5)

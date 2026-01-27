@@ -7,9 +7,11 @@ if not objectifs then return end
 local dataDirty = false
 local IsLoggedIn = false
 local HideZero = true
-local lastExportTime = 0
+local lastExportTime = time()
 local ExportToSavedVariables
 local WoodTracker_AH_StatusText = nil
+local IsLoggingOut = false
+local CachedTotals = {}
 
 
 
@@ -81,10 +83,13 @@ end
 local syncWatcher = CreateFrame("Frame")
 syncWatcher:RegisterEvent("BAG_UPDATE_DELAYED")
 
+local exportTimer
+
 syncWatcher:SetScript("OnEvent", function()
+    if IsLoggingOut then return end
     dataDirty = true
-    ExportToSavedVariables()
 end)
+
 
 -- =========================
 -- Frame principale
@@ -338,6 +343,7 @@ function UpdateDisplay()
 
             -- mise à jour valeurs
             local total = GetTotalItemCount(data.itemID)
+            CachedTotals[key] = total
             local objectif = data.objectif
             local reste = math.max(objectif - total, 0)
 
@@ -379,7 +385,10 @@ end
 -- Export SavedVariables
 -- =========================
 ExportToSavedVariables = function()
-    
+
+    -- 🔒 Sécurité : ne jamais écraser avec du vide
+    if not next(CachedTotals) then return end
+
     WoodTracker_Sync = WoodTracker_Sync or {}
 
     WoodTracker_Sync.meta = {
@@ -395,14 +404,15 @@ ExportToSavedVariables = function()
     WoodTracker_Sync.data = {}
 
     for _, key in ipairs(ordre) do
-        local data = objectifs[key]
-        if data then
-            WoodTracker_Sync.data[key] = GetTotalItemCount(data.itemID)
+        local cached = CachedTotals[key]
+        if cached ~= nil then
+            WoodTracker_Sync.data[key] = cached
         end
     end
 
     WoodTracker_Sync.checksum = ComputeChecksum(WoodTracker_Sync.data)
 end
+
 
 
 -- =========================
@@ -485,6 +495,7 @@ f:SetScript("OnEvent", function(_, event)
         end
         C_Timer.After(0.1, UpdateDisplay)
     elseif event == "PLAYER_LOGOUT" then
+        IsLoggingOut = true
         ExportToSavedVariables()
     end
 end)
