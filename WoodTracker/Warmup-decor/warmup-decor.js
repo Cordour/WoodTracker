@@ -224,6 +224,40 @@ async function fetchTierRecipes(token, professionId, tierId) {
 async function fetchRecipe(token, recipeId) {
   return fetchBlizzard(`/data/wow/recipe/${recipeId}`, token);
 }
+function writeDecorItemIDsLua(decorBuffer) {
+  const ids = [
+    ...new Set(
+      decorBuffer
+        .map(d => d.itemID)
+        .filter(Boolean)
+    )
+  ];
+
+  const lua = [
+    "-- ⚠️ AUTO-GÉNÉRÉ — NE PAS MODIFIER",
+    "WoodTracker_DecorItemIDs = {",
+    ...ids.map(id => `  ${id},`),
+    "}",
+    ""
+  ].join("\n");
+
+  const dirPath = new URL(
+  "../client/addon/WoodTracker/generated/",
+  import.meta.url
+);
+
+
+  // 👇 IMPORTANT : créer le dossier s’il n’existe pas
+  fs.mkdirSync(dirPath, { recursive: true });
+
+  const outputPath = new URL(
+    "decor_item_ids.lua",
+    dirPath
+  );
+
+  fs.writeFileSync(outputPath, lua, "utf8");
+  console.log(`🧩 decor_item_ids.lua généré (${ids.length} IDs)`);
+}
 
 /* ===========================
    MAIN
@@ -349,7 +383,8 @@ async function fetchRecipe(token, recipeId) {
       JSON.stringify(decorBuffer, null, 2),
       "utf8"
     );
-
+    
+    writeDecorItemIDsLua(decorBuffer);
 
   const duration = ((Date.now() - start) / 1000).toFixed(1);
 

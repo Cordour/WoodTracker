@@ -48,21 +48,20 @@ function extractMinPrices(ahData) {
     const itemId = auction.item?.id;
     if (!itemId) continue;
 
-    let unitPrice = auction.unit_price;
+    // 🔒 IGNORER tout ce qui n'a pas de buyout
+    if (!auction.buyout || auction.buyout <= 0) continue;
 
-    if (!unitPrice && auction.buyout && auction.quantity) {
-      unitPrice = Math.floor(auction.buyout / auction.quantity);
-    }
+    // 💰 buyout est TOUJOURS en copper
+    const priceGold = Math.floor(auction.buyout / 10000);
 
-    if (!unitPrice || unitPrice <= 0) continue;
-
-    if (!prices[itemId] || unitPrice < prices[itemId]) {
-      prices[itemId] = unitPrice;
+    if (!prices[itemId] || priceGold < prices[itemId]) {
+      prices[itemId] = priceGold;
     }
   }
 
   return prices;
 }
+
 
 function extractCommodityPrices(data) {
   const prices = {};

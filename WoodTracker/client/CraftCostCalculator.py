@@ -312,10 +312,9 @@ def run(log_cb=None):
                 int(crafted_id)
             ])
         log("▶ Lancement récupération AH Blizzard")
-        run_node_script("ah_fetch.js", log)
         log("✔ AH Blizzard terminé")
         values = results + [["", int(i)] for i in no_price_items]
-
+        run_node_script("ah_fetch.js", log)
         write_to_sheets(sheet_id, values, log)
 
         with open(
