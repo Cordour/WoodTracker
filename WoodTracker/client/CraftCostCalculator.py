@@ -3,29 +3,30 @@ import os
 from collections import Counter
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+import threading
+import time
 
+_RUN_LOCK = threading.Lock()
+_LAST_RUN_TS = 0
+COOLDOWN_SECONDS = 120 
+# ======================
+# PATHS & CONFIG
+# ======================
 
+APPDATA = os.environ.get("APPDATA", "")
+CONFIG_PATH = os.path.join(APPDATA, "WoodTracker", "config.json")
+TOKEN_PATH = os.path.join(APPDATA, "WoodTracker", "token.json")
 
-CONFIG_PATH = os.path.join(
-    os.environ["APPDATA"],
-    "WoodTracker",
-    "config.json"
+BASE = os.path.join(
+    os.path.dirname(__file__),
+    "..",
+    "Warmup-decor"
 )
 
-TOKEN_PATH = os.path.join(
-    os.environ["APPDATA"],
-    "WoodTracker",
-    "token.json"
-)
+# ======================
+# CONSTANTS
+# ======================
 
-def load_json(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
-    
-config = load_json(CONFIG_PATH)
-SHEET_ID = config["sheet_id"]
-print("📄 Config utilisé :", CONFIG_PATH)
-print("📊 Sheet ID :", SHEET_ID)
 WOOD_IDS = {
     "245586",  # classique
     "242691",  # outreterre
@@ -50,6 +51,16 @@ IGNORED_REAGENTS = {
     "54440",
 }
 
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+
+# ======================
+# HELPERS
+# ======================
+
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
 
 def get_best_price(item_id, ah_components, ah_server):
     prices = []
@@ -60,24 +71,22 @@ def get_best_price(item_id, ah_components, ah_server):
     if item_id in ah_server:
         prices.append(ah_server[item_id]["price"])
 
-    if not prices:
-        return None
-
-    return min(prices)
+    return min(prices) if prices else None
 
 
 def calc_craft_cost(recipe, ah_components, ah_server, wood_item_ids):
     total = 0
     missing = []
-    IGNORED_IDS = wood_item_ids | IGNORED_REAGENTS
+    ignored_ids = wood_item_ids | IGNORED_REAGENTS
 
     for r in recipe.get("reagents", []):
         item_id = str(r["reagent"]["id"])
-        if item_id in IGNORED_IDS:
+        if item_id in ignored_ids:
             continue
 
         qty = r.get("quantity", 0)
         price = get_best_price(item_id, ah_components, ah_server)
+
         if price is None:
             missing.append(f"reagent:{item_id}")
             continue
@@ -90,7 +99,7 @@ def calc_craft_cost(recipe, ah_components, ah_server, wood_item_ids):
 
         for r in slot.get("reagents", []):
             item_id = str(r["reagent"]["id"])
-            if item_id in IGNORED_IDS:
+            if item_id in ignored_ids:
                 continue
 
             p = get_best_price(item_id, ah_components, ah_server)
@@ -104,9 +113,6 @@ def calc_craft_cost(recipe, ah_components, ah_server, wood_item_ids):
         total += qty * best_price
 
     return total, missing
-
-
-
 
 
 def calc_rentabilite(decor, recipe, ah_components, ah_server, prix_vente):
@@ -127,136 +133,132 @@ def calc_rentabilite(decor, recipe, ah_components, ah_server, prix_vente):
     return (prix_vente - cost) / wood
 
 
+# ======================
+# GOOGLE SHEETS
+# ======================
 
-# ========= MAIN =========
-
-BASE = "../Warmup-decor/"
-
-decor_list = load_json(BASE + "decor.json")
-recipes = load_json(BASE + "recipe_cache.json")
-ah_data = load_json(BASE + "ah_cache.json")
-ah_components = ah_data["components"]
-ah_server = ah_data.get("server", {})
-
-
-results = []
-rejected = []
-no_price_items = []
-
-for decor in decor_list:
-    recipe = recipes.get(str(decor["recipeId"]))
-    if not recipe:
-        continue
-
-    crafted_id = str(decor.get("itemID"))
-    if not crafted_id:
-        continue
-
-    prix_vente = get_best_price(crafted_id, ah_components, ah_server)
-    if prix_vente is None:
-        no_price_items.append({
-            "name": decor["name"],
-            "itemID": crafted_id,
-            "recipeId": decor["recipeId"]
-        })
-        continue
-
-
-    rent = calc_rentabilite(
-        decor,
-        recipe,
-        ah_components,
-        ah_server,
-        prix_vente
-    )
-
-    if rent is None:
-        cost, missing = calc_craft_cost(
-            recipe,
-            ah_components,
-            ah_server,
-            WOOD_IDS
-        )
-
-        rejected.append({
-            "name": decor["name"],
-            "itemID": decor["itemID"],
-            "recipeId": decor["recipeId"],
-            "missing": missing
-        })
-        continue
-
-    results.append({
-        "name": decor["name"],
-        "itemID": crafted_id,
-        "po_par_bois": round(rent / 10000)
-    })
-
-
-values_ok = [
-    [r["po_par_bois"], int(r["itemID"])]
-    for r in results
-]
-values_no_price = [
-    ["", int(r["itemID"])]
-    for r in no_price_items
-]
-values = values_ok + values_no_price
-
-
-def write_to_sheets(sheet_id, values):
-    creds = Credentials.from_authorized_user_file(
-        TOKEN_PATH,
-        ["https://www.googleapis.com/auth/spreadsheets"]
-    )
-
+def write_to_sheets(sheet_id, values, log_cb=None):
+    creds = Credentials.from_authorized_user_file(TOKEN_PATH, SCOPES)
     service = build("sheets", "v4", credentials=creds)
-    sheet = service.spreadsheets()
 
-    body = {
-        "values": values
-    }
+    body = {"values": values}
 
-    result = sheet.values().update(
+    result = service.spreadsheets().values().update(
         spreadsheetId=sheet_id,
         range="BDD!K7:L",
         valueInputOption="RAW",
         body=body
     ).execute()
 
-    print(f"📤 {result.get('updatedCells')} cellules mises à jour")
-
-    
-write_to_sheets(SHEET_ID, values)
-
-print(f"Décors exploitables : {len(results)}")
-print(f"Décors sans prix    : {len(no_price_items)}")
-print(f"Décors rejetés      : {len(rejected)}")
-print(f"Total décor bois    : {len(decor_list)}")
+    if log_cb:
+        log_cb(f"📤 {result.get('updatedCells')} cellules mises à jour")
 
 
-print("\n--- LISTE COMPLÈTE DES REJETS ---")
+# ======================
+# ENTRY POINT (IMPORTANT)
+# ======================
 
-if not rejected:
-    print("Aucun rejet 🎉")
-else:
-    for r in rejected:
-        print(f"- {r['name']} (itemID={r['itemID']}, recipeId={r['recipeId']})")
-        for m in r["missing"]:
-            print("   ❌", m)
-counter = Counter()
+def run(log_cb=None):
+    def log(msg):
+        if log_cb:
+            log_cb(msg)
 
-for r in rejected:
-    for m in r["missing"]:
-        counter[m] += 1
-print("\n--- LISTE DES DÉCORS SANS PRIX AH ---")
+    global _LAST_RUN_TS
 
-for d in no_price_items:
-    print(f"- {d['name']} (itemID={d['itemID']}, recipeId={d['recipeId']})")
-print("\n--- STATS DES REJETS ---")
-for reason, count in counter.most_common():
-    print(f"{reason} : {count}")
-with open("rejected_decors.json", "w", encoding="utf-8") as f:
-    json.dump(rejected, f, indent=2, ensure_ascii=False)
+    # 🔒 Anti double-run
+    if not _RUN_LOCK.acquire(blocking=False):
+        log("⏳ Calcul déjà en cours — ignoré")
+        return
+
+    now = time.time()
+    elapsed = now - _LAST_RUN_TS
+
+    if elapsed < COOLDOWN_SECONDS:
+        remaining = int(COOLDOWN_SECONDS - elapsed)
+        log(f"⏱️ Cooldown actif — encore {remaining}s")
+        _RUN_LOCK.release()
+        return
 
 
+    try:
+
+        config = load_json(CONFIG_PATH)
+        sheet_id = config.get("sheet_id")
+
+        if not sheet_id:
+            raise RuntimeError("Sheet ID manquant dans config.json")
+
+        decor_list = load_json(os.path.join(BASE, "decor.json"))
+        recipes = load_json(os.path.join(BASE, "recipe_cache.json"))
+        ah_data = load_json(os.path.join(BASE, "ah_cache.json"))
+
+        ah_components = ah_data["components"]
+        ah_server = ah_data.get("server", {})
+
+        results = []
+        rejected = []
+        no_price_items = []
+
+        for decor in decor_list:
+            recipe = recipes.get(str(decor["recipeId"]))
+            if not recipe:
+                continue
+
+            crafted_id = str(decor.get("itemID"))
+            if not crafted_id:
+                continue
+
+            prix_vente = get_best_price(crafted_id, ah_components, ah_server)
+            if prix_vente is None:
+                no_price_items.append(crafted_id)
+                continue
+
+            rent = calc_rentabilite(
+                decor,
+                recipe,
+                ah_components,
+                ah_server,
+                prix_vente
+            )
+
+            if rent is None:
+                cost, missing = calc_craft_cost(
+                    recipe,
+                    ah_components,
+                    ah_server,
+                    WOOD_IDS
+                )
+
+                rejected.append({
+                    "name": decor["name"],
+                    "itemID": crafted_id,
+                    "recipeId": decor["recipeId"],
+                    "missing": missing
+                })
+                continue
+
+            results.append([
+                round(rent / 10000),
+                int(crafted_id)
+            ])
+
+        values = results + [["", int(i)] for i in no_price_items]
+
+        write_to_sheets(sheet_id, values, log)
+
+        with open(
+            os.path.join(os.path.dirname(__file__), "rejected_decors.json"),
+            "w",
+            encoding="utf-8"
+        ) as f:
+            json.dump(rejected, f, indent=2, ensure_ascii=False)
+
+        log(f"✔ Décors exploitables : {len(results)}")
+        log(f"⚠ Décors sans prix    : {len(no_price_items)}")
+        log(f"❌ Décors rejetés      : {len(rejected)}")
+        log("🧮 Calcul terminé")
+        _LAST_RUN_TS = time.time()
+
+    finally:
+        # 🔓 Toujours libérer le lock
+        _RUN_LOCK.release()

@@ -19,11 +19,13 @@ import requests
 import subprocess
 from paths import is_wow_running, is_wow_alive_via_heartbeat
 from config import get_appdata_dir
+from CraftCostCalculator import run as run_craft_cost
+
 
 GITHUB_VERSION_URL = "https://raw.githubusercontent.com/Cordour/WoodTracker/main/version.json"
 
 
-APP_VERSION = "1.1.9"
+APP_VERSION = "1.2.0"
 
 def check_update():
     r = requests.get(GITHUB_VERSION_URL, timeout=5)
@@ -149,6 +151,9 @@ def find_wow_addon_dir():
 class WoodTrackerGUI(tk.Tk):
     def __init__(self):
         super().__init__()
+        self.after(10 * 60 * 1000, self._auto_craft_timer)
+        self._craft_cooldown_sec = 120  # 2 minutes
+        self._craft_running = False
         self.update_available = False
         self.status_var = tk.StringVar(value="")
         try:
@@ -166,6 +171,9 @@ class WoodTrackerGUI(tk.Tk):
         self.configure(bg=BG_MAIN)
         self._wow_opened_at = None
         self.sync_running = False
+        self.last_craft_ts = None
+        self.last_craft_var = tk.StringVar(value="")
+        self.after(1000, self._update_last_craft_label)
         self.had_warning = False
         self.after(500, self._maybe_update_addon)
         self._update_button_shown = False
@@ -200,6 +208,15 @@ class WoodTrackerGUI(tk.Tk):
         
         self._wow_was_running = is_wow_running()
         self.after(3000, self._watch_wow_process)
+
+    def _auto_craft_timer(self):
+        if self.is_ready_for_sync():
+            self.log_cb("⏲️ Recalcul automatique des crafts")
+            self.run_craft_cost_calculator()
+
+        # 🔁 relance du timer
+        self.after(10 * 60 * 1000, self._auto_craft_timer)
+
 
     def open_patchnotes_window(self, data):
         win = tk.Toplevel(self)
@@ -739,7 +756,7 @@ class WoodTrackerGUI(tk.Tk):
         header = tk.Frame(self.main, bg=BG_PANEL, height=60)
         header.pack(fill="x")
 
-
+        
         tk.Label(
             header,
             text="WoodTracker",
@@ -769,6 +786,14 @@ class WoodTrackerGUI(tk.Tk):
         )
         self.update_button.pack(side="right", padx=16)
         self.update_button.pack_forget()  # caché par défaut
+
+        tk.Label(
+            header,
+            text=f"v{APP_VERSION}",
+            bg=BG_PANEL,
+            fg="#9e9e9e",
+            font=("Segoe UI", 9),
+        ).pack(side="right", padx=(0, 12))
 
 
         self.config_button = tk.Button(
@@ -970,6 +995,7 @@ class WoodTrackerGUI(tk.Tk):
         footer = tk.Frame(self.main, bg=BG_MAIN)
         footer.pack(fill="x", padx=12, pady=(6, 10))
 
+        # Barre de progression
         self.progress = ttk.Progressbar(
             footer,
             mode="indeterminate",
@@ -977,8 +1003,46 @@ class WoodTrackerGUI(tk.Tk):
         )
         self.progress.pack(fill="x", pady=(0, 8))
 
-        synchro=self.sync_button = tk.Button(
-            footer,
+        # Conteneur libre
+        bottom = tk.Frame(footer, bg=BG_MAIN, height=60)
+        bottom.pack(fill="x")
+        bottom.pack_propagate(False)
+
+        # =========================
+        # HV à gauche
+        # =========================
+        left = tk.Frame(bottom, bg=BG_MAIN, width=220, height=50)
+        left.place(x=50, y=18)
+        left.pack_propagate(False)
+
+        tk.Button(
+            left,
+            text="🐻 Mise à jour HV",
+            bg=BG_PANEL,
+            fg=FG_TEXT,
+            relief="flat",
+            font=("Segoe UI", 9),
+            command=self.run_craft_cost_calculator,
+        ).pack(anchor="w")
+
+        label = tk.Label(
+            left,
+            textvariable=self.last_craft_var,
+            bg=BG_MAIN,
+            fg="#9e9e9e",
+            font=("Segoe UI", 8, "italic"),
+            anchor="w",
+        )
+
+        label.place(x=8, y=26)
+
+
+
+        # =========================
+        # SYNCHRO CENTRÉ (FORCÉ)
+        # =========================
+        self.sync_button = tk.Button(
+            bottom,
             text="Synchroniser",
             bg=HONEY,
             fg="#1e2126",
@@ -987,10 +1051,14 @@ class WoodTrackerGUI(tk.Tk):
             state="normal" if self.is_ready_for_sync() else "disabled",
             command=self.start_sync,
         )
-        self.apply_hover(synchro, HONEY, HONEY_DARK)
-        self.sync_button.pack()
-                
-        # 🔄 Bouton BDD Blizzard
+        self.apply_hover(self.sync_button, HONEY, HONEY_DARK)
+
+        # 💥 CENTRAGE ABSOLU
+        self.sync_button.place(relx=0.5, y=10, anchor="n")
+
+        # =========================
+        # BDD Blizzard
+        # =========================
         self.bdd_button = tk.Button(
             footer,
             text="🔄 Actualiser la BDD Blizzard",
@@ -1003,9 +1071,75 @@ class WoodTrackerGUI(tk.Tk):
         )
         self.bdd_button.pack(pady=(6, 0))
 
+
+
+
+       
     # ======================
     # LOGIC
     # ======================
+    def run_craft_cost_calculator(self, force=False):
+        """
+        Lance CraftCostCalculator avec cooldown intelligent
+        """
+
+        now = time.time()
+
+        # ⛔ déjà en cours
+        if self._craft_running:
+            self.log_cb("⏳ Calcul déjà en cours")
+            return
+
+        # ⏱️ cooldown
+        if (
+            not force
+            and self.last_craft_ts
+            and now - self.last_craft_ts < self._craft_cooldown_sec
+        ):
+            remaining = int(
+                self._craft_cooldown_sec - (now - self.last_craft_ts)
+            )
+            self.log_cb(
+                f"⏱️ Recalcul possible dans {remaining}s"
+            )
+            return
+
+        self._craft_running = True
+        self.log_cb("🧮 Calcul des coûts de craft…")
+
+        def worker():
+            try:
+                run_craft_cost(self.log_cb)
+            finally:
+                self.after(0, self._on_craft_cost_done)
+
+        threading.Thread(target=worker, daemon=True).start()
+
+
+    def _on_craft_cost_done(self):
+        self.last_craft_ts = time.time()
+        self._craft_running = False
+        self.log_cb("✔ Calcul des crafts terminé")
+
+
+    def _update_last_craft_label(self):
+        if not self.last_craft_ts:
+            self.last_craft_var.set("")
+        else:
+            delta = int(time.time() - self.last_craft_ts)
+
+            if delta < 60:
+                txt = f"Dernière MAJ {delta} s"
+            elif delta < 3600:
+                txt = f"Dernière MAJ  {delta // 60} min"
+            else:
+                txt = f"Dernière MAJ  {delta // 3600} h"
+
+            self.last_craft_var.set(txt)
+
+        self.after(1000, self._update_last_craft_label)
+
+
     def apply_hover(self, widget, normal, hover):
         widget.bind("<Enter>", lambda e: widget.config(bg=hover))
         widget.bind("<Leave>", lambda e: widget.config(bg=normal))
@@ -1135,6 +1269,8 @@ class WoodTrackerGUI(tk.Tk):
             )
             self.refresh_sync_button()
 
+            self.log_cb("🧮 Recalcul des crafts après MAJ BDD")
+            self.run_craft_cost_calculator(force=True)
 
 
     def start_sync(self):

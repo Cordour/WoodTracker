@@ -239,7 +239,6 @@ async function fetchRecipe(token, recipeId) {
   };
   const start = Date.now();
   let errorCount = 0;
-  let recipeCount = 0;
 
   console.log("▶ Auth Blizzard...");
   const token = await getAccessToken();
@@ -357,7 +356,7 @@ async function fetchRecipe(token, recipeId) {
   console.log("\n==============================");
   console.log("✅ TERMINÉ");
   console.log(`⏱ Durée       : ${duration}s`);
-  console.log(`📦 Recettes   : ${recipeCount}`);
+  console.log(`📦 Recettes   : ${stats.returned}`);
   console.log(`❌ Erreurs    : ${errorCount}`);
   console.log(`📄 Fichier    : ${OUTPUT_FILE}`);
   console.log("==============================");

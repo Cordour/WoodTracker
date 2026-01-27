@@ -38,6 +38,7 @@ datas += [
     ("client/node", "node"),
     ("Warmup-decor", "Warmup-decor"),
     ("client/client_oauth.json", "."),
+    ("client/rejected_decors.json", "data"),
 ]
 
 # ======================================================

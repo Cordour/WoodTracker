@@ -294,29 +294,30 @@ def sync_bdd_blizzard(log_cb=default_log):
 
     # 4️⃣ Construire les lignes Google Sheets
     rows = []
-    for block in data:
-        for item in block["items"]:
-            rows.append([
-                None,
-                None,
-                block["profession"],
-                block["tier"],
-                item["name"],
-                item["wood"],
-                "https://www.wowhead.com/fr/search?q=" + quote(item["name"])
-            ])
+    for item in data:
+        item_id = item.get("itemID")
+        rows.append([
+            None,
+            None,
+            item.get("profession"),
+            item.get("tier"),
+            item.get("name"),
+            item.get("wood"),
+            f"https://www.wowhead.com/fr/item={item_id}"
+        ])
             
 
-    # 5️⃣ Écriture Sheets
+    # 5️⃣ Écriture Sheets (ÉCRASEMENT PROPRE)
     client = get_gspread_client()
     sheet = client.open_by_key(get_sheet_id()).worksheet("BDD")
 
+    # ⚠️ vider avant écriture
+    sheet.batch_clear(["A7:G"])
     sheet.update(
-        "A7:G",
+        "A7",
         rows,
         value_input_option="USER_ENTERED"
     )
-
     log_cb(f"✅ BDD Blizzard mise à jour ({len(rows)} lignes)")
 
 
