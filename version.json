@@ -1,6 +1,6 @@
 {
   "version": "1.2.0",
-  "changelog": "Patchnotes:\n-Fix Addon ENCORE",
+  "changelog": "Patchnotes :\n\nEXE:\n-BugFIX de 100 bugs apparus en une soirée merci BLIZZZAARDDDDDDDD UWUUUU\n-actualisation 10 fois plus rapide, merci au miel.\n-acutalisation auto des données HV toutes les 10 minutes, lors de l'acutalisation de la BDD et bouton manuel dispo.\n-Affichage version.\n\nSHEETS : \n-ajout d'un bouton 'tout clear'\n-Fix url wowhead. Vous avez le lien pour voir les items en 3D, vous pouvez voir le visuel de chacun des décors!!\n-Ajout de la feuille rentabilité qui permet de connaitre la rentrabilité des objets que l'on peut crafter selon nos métiers.",
   "zip_url": "https://github.com/Cordour/WoodTracker/releases/download/v1.2.0/WoodTracker.zip",
   "addon_updated": false
 }

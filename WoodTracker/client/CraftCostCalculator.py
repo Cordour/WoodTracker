@@ -5,6 +5,65 @@ from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
 import threading
 import time
+import subprocess
+from pathlib import Path
+from utils import resource_path
+import sys
+
+if hasattr(sys, "_MEIPASS"):
+    # EXE PyInstaller
+    BASE = resource_path("Warmup-decor")
+else:
+    # DEV : client/ → remonter au dossier WoodTracker/
+    BASE = Path(__file__).resolve().parent.parent / "Warmup-decor"
+
+
+
+
+def run_node_script(script_name: str, log_cb):
+    """
+    Lance un script Node.js de Warmup-decor
+    Compatible DEV + EXE PyInstaller
+    """
+    node_exe = resource_path("node/node.exe")
+
+    # 🔁 DEV vs EXE
+    if hasattr(sys, "_MEIPASS"):
+        # EXE PyInstaller
+        base = Path(sys._MEIPASS)
+    else:
+        # DEV : on remonte depuis client/
+        base = Path(__file__).resolve().parent.parent
+
+    script_path = base / "Warmup-decor" / script_name
+
+    if not node_exe.exists():
+        raise RuntimeError(f"node.exe introuvable : {node_exe}")
+
+    if not script_path.exists():
+        raise RuntimeError(f"Script Node introuvable : {script_path}")
+
+    log_cb(f"▶ Lancement Node : {script_name}")
+
+    process = subprocess.Popen(
+        [str(node_exe), str(script_path)],
+        cwd=script_path.parent,   # 🔥 CRITIQUE
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+        encoding="utf-8",
+        creationflags=subprocess.CREATE_NO_WINDOW,
+    )
+
+    for line in process.stdout:
+        log_cb(line.rstrip())
+
+    process.wait()
+
+    if process.returncode != 0:
+        raise RuntimeError(f"Erreur Node sur {script_name}")
+
+    
 
 _RUN_LOCK = threading.Lock()
 _LAST_RUN_TS = 0
@@ -17,11 +76,7 @@ APPDATA = os.environ.get("APPDATA", "")
 CONFIG_PATH = os.path.join(APPDATA, "WoodTracker", "config.json")
 TOKEN_PATH = os.path.join(APPDATA, "WoodTracker", "token.json")
 
-BASE = os.path.join(
-    os.path.dirname(__file__),
-    "..",
-    "Warmup-decor"
-)
+
 
 # ======================
 # CONSTANTS
@@ -165,6 +220,21 @@ def run(log_cb=None):
 
     global _LAST_RUN_TS
 
+    # 🔍 Vérification fichiers nécessaires
+    required_files = [
+        "decor.json",
+        "recipe_cache.json",
+        "ah_cache.json",
+    ]
+
+    for fname in required_files:
+        path = os.path.join(BASE, fname)
+        if not os.path.exists(path):
+            raise RuntimeError(
+                f"Fichier manquant : {fname}\n"
+                f"👉 Lance d'abord l'actualisation BDD Blizzard"
+            )
+
     # 🔒 Anti double-run
     if not _RUN_LOCK.acquire(blocking=False):
         log("⏳ Calcul déjà en cours — ignoré")
@@ -241,7 +311,9 @@ def run(log_cb=None):
                 round(rent / 10000),
                 int(crafted_id)
             ])
-
+        log("▶ Lancement récupération AH Blizzard")
+        run_node_script("ah_fetch.js", log)
+        log("✔ AH Blizzard terminé")
         values = results + [["", int(i)] for i in no_price_items]
 
         write_to_sheets(sheet_id, values, log)
