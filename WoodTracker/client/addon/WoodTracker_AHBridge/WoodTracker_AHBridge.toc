@@ -1,0 +1,12 @@
+## Interface: 120000
+## Title: WoodTracker AH Bridge
+## Notes: Pont Auctionator -> WoodTracker
+## Author: Cordour
+## Version: 0.1
+## Dependencies: Auctionator, WoodTracker
+## SavedVariables: WoodTracker_AH_DB
+
+
+generated/decor_item_ids.lua
+generated/component_item_ids.lua
+WoodTracker_AHBridge.lua

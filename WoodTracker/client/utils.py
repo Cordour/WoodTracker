@@ -20,12 +20,20 @@ def resource_path(relative_path: str) -> Path:
 
 
 def install_addon(log_cb):
-    log_cb("📥 Copie de l’addon WoodTracker…")
+    log_cb("📥 Installation des addons WoodTracker…")
 
-    # 1️⃣ Source addon (embarqué)
-    source = resource_path("addon/WoodTracker")
-    if not source.exists():
-        raise RuntimeError(f"Addon source introuvable : {source}")
+    # 1️⃣ Source addons (embarqués dans l'exe)
+    base_source = resource_path("addon")
+
+    addons_to_install = [
+        "WoodTracker",
+        "WoodTracker_AHBridge",
+    ]
+
+    for addon_name in addons_to_install:
+        src = base_source / addon_name
+        if not src.exists():
+            raise RuntimeError(f"Addon source introuvable : {src}")
 
     # 2️⃣ Localisation WoW
     candidates = [
@@ -50,16 +58,19 @@ def install_addon(log_cb):
     addons_dir = wow_root / "_retail_" / "Interface" / "AddOns"
     addons_dir.mkdir(parents=True, exist_ok=True)
 
-    target = addons_dir / "WoodTracker"
+    # 3️⃣ Copie des addons
+    for addon_name in addons_to_install:
+        src = base_source / addon_name
+        dst = addons_dir / addon_name
 
-    # 3️⃣ Remplacement propre
-    if target.exists():
-        shutil.rmtree(target)
+        if dst.exists():
+            shutil.rmtree(dst)
 
-    shutil.copytree(source, target)
+        shutil.copytree(src, dst)
+        log_cb(f"✔ Addon installé : {addon_name}")
 
-    # 4️⃣ Mise à jour config
-    set_wow_addon_dir(str(target))
+    # 4️⃣ Mise à jour config (addon principal)
+    set_wow_addon_dir(str(addons_dir / "WoodTracker"))
 
-    log_cb("✔ Addon WoodTracker installé avec succès")
-    return str(target)
+    log_cb("✅ Tous les addons WoodTracker sont installés")
+    return str(addons_dir)

@@ -9,6 +9,17 @@ local IsLoggedIn = false
 local HideZero = true
 local lastExportTime = 0
 local ExportToSavedVariables
+local WoodTracker_AH_StatusText = nil
+
+
+
+
+
+
+
+if not WoodTracker_AH or not WoodTracker_AH.prices then
+  print("⚠ AH Bridge not ready")
+end
 
 
 WoodTrackerDB = WoodTrackerDB or {
@@ -509,4 +520,66 @@ SlashCmdList["WOODTRACKER"] = function()
 end
 
 
+
+-- =========================
+-- AUCTION HOUSE BUTTON (BOTTOM – UNIVERSAL)
+-- =========================
+
+local AHButtonCreated = false
+local AHWatcher = CreateFrame("Frame")
+AHWatcher:RegisterEvent("AUCTION_HOUSE_SHOW")
+
+AHWatcher:SetScript("OnEvent", function()
+    if AHButtonCreated then return end
+    if not AuctionHouseFrame then return end
+
+    AHButtonCreated = true
+
+    local btn = CreateFrame("Button", nil, AuctionHouseFrame, "UIPanelButtonTemplate")
+    btn:SetSize(200, 22)
+    btn:SetText("WoodTracker – Scanner l’HV")
+
+    -- ✅ POSITION EXACTE (BAS, SAFE, TOUJOURS VISIBLE)
+    btn:SetPoint("BOTTOM", AuctionHouseFrame, "BOTTOM", 0, 6)
+    btn:SetFrameStrata("HIGH")
+    btn:SetFrameLevel(200)
+
+    WoodTracker_AH_StatusText = btn:CreateFontString(nil, "OVERLAY", "GameFontDisableSmall")
+    WoodTracker_AH_StatusText:SetPoint("BOTTOM", btn, "TOP", 0, 4)
+    WoodTracker_AH_StatusText:SetText("")
+
+
+    btn:SetScript("OnClick", function()
+    if not WoodTracker_StartAHScan then
+        WoodTracker_AH_StatusText:SetText("❌ AH Bridge non chargé")
+        return
+    end
+
+    if WoodTracker_AH_State and WoodTracker_AH_State.scanning then
+        return -- empêche double scan
+    end
+
+    WoodTracker_AH_StatusText:SetText("0 %")
+    WoodTracker_StartAHScan()
+    end)
+end)
+
+-- =========================
+-- AH Scan Progress (%)
+-- =========================
+
+local AHProgressUpdater = CreateFrame("Frame")
+AHProgressUpdater:SetScript("OnUpdate", function()
+  if not WoodTracker_AH_StatusText then return end
+  if not WoodTracker_AH_State then return end
+  if not WoodTracker_AH_State.scanning then return end
+
+  local total = WoodTracker_AH_State.total or 0
+  local current = WoodTracker_AH_State.current or 0
+
+  if total > 0 then
+    local pct = math.floor((current / total) * 100)
+    WoodTracker_AH_StatusText:SetText(pct .. " %")
+  end
+end)
 

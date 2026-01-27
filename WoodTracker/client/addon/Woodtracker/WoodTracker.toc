@@ -4,10 +4,12 @@
 ## Author: Cordana
 ## Version: 1.0
 ## SavedVariables: WoodTracker_Objectifs, WoodTracker_Sync, WoodTrackerDB
+## Dependencies: WoodTracker_AHBridge
 
 libs/LibStub.lua
 libs/LibDataBroker-1.1.lua
 libs/LibDBIcon-1.0.lua
 
+generated/decor_item_ids.lua
 generated/objectifs.lua
 WoodTracker.lua
